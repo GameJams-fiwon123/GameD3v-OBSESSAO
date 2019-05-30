@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GFX/cenario_teste.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Destinations.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 402.823, 97.6448, 2108.87, 62.7904, 1893.56, 977.33, 199.818, 969.128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 402.823, 97.6448, 2108.87, 62.7904, 1893.56, 977.33, 199.818, 969.128 ) ]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 1 )
+
+[node name="Destinations" type="Node2D" parent="Navigation2D"]
+script = ExtResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1031.42, 274.772 )
+
+[node name="Position2D2" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1281.59, 467.523 )
+
+[node name="Position2D3" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1580.96, 326.036 )
+
+[node name="Position2D4" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1098.54, 765.352 )
+
+[node name="Position2D6" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1416.38, 798.161 )
+
+[node name="Position2D7" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1736.26, 705.887 )
+
+[node name="Position2D5" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 1947.23, 242.708 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 486.711, 325.707 )
+
+[node name="Key" parent="YSort" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 732.842, 286.845 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Key"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 9600
+limit_bottom = 1080
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Ghost" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 373.042, 214.214 )
+
