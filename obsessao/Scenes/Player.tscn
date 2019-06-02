@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Personagem_RIGHT.png" type="Texture" id=2]
-[ext_resource path="res://GFX/Personagem_LEFT.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Personagem_LEFT.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Personagem_RIGHT.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Personagem_UP.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Personagem_DOWN.png" type="Texture" id=5]
 
@@ -10,12 +10,12 @@
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "right",
+"name": "left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "left",
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -32,6 +32,10 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9.21014, 10.5714 )
 
+[sub_resource type="OccluderPolygon2D" id=3]
+cull_mode = 1
+polygon = PoolVector2Array( -14.2588, 2.24302, -15.07, -8.96828, -7.65005, -14.8445, 8.18714, -14.6063, 14.3361, -8.99452, 14.684, 1.90776, 10.0447, 6.54703, 13.2922, 10.2584, 13.0603, 12.2301, 10.5087, 12.3461, 8.421, 10.8384, 8.30502, 14.4338, 3.08584, 14.6657, 2.62191, 12.5781, -2.48128, 12.3461, -3.6411, 14.0858, -8.0484, 14.2018, -8.39635, 10.6064, -10.6, 12.3461, -13.3836, 12.3461, -13.6155, 9.9105, -9.09224, 6.31506 )
+
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -41,6 +45,11 @@ frames = SubResource( 1 )
 animation = "down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.209343, 3.87292 )
+position = Vector2( -0.695309, 3.87292 )
 shape = SubResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+scale = Vector2( 1, 1 )
+z_as_relative = false
+occluder = SubResource( 3 )
 

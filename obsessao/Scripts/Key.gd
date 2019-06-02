@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 300
+var speed = 200
 
 var motion = Vector2()
 var possible_destination = []
@@ -34,7 +34,7 @@ func navigate():
 		update_path()
 	
 func move():
-	motion = (destination-position).normalized() * (speed * walk_slowdown)
+	motion = (destination-position).normalized() * speed
 	
 	if is_on_wall():
 		make_path()
@@ -53,3 +53,10 @@ func update_path():
 		make_path()
 	else:
 		path.remove(0)
+
+func _on_Detector_body_entered(body):
+	speed = 300
+
+
+func _on_Detector_body_exited(body):
+	speed = 200
