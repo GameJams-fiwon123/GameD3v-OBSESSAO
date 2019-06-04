@@ -3,11 +3,11 @@
 [ext_resource path="res://GFX/cenario_teste.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Destinations.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Teia.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Buraco.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Objects/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Objects/Key.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Objects/Ghost.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Objects/Teia.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Objects/Buraco.tscn" type="PackedScene" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 79.0388, 83.8196, 9462.43, 74.9933, 9469.21, 945.205, 79.0388, 981.47 )
@@ -83,8 +83,50 @@ z_index = 1
 [node name="Teia" parent="Teias" instance=ExtResource( 7 )]
 position = Vector2( 804.916, 416.024 )
 
+[node name="Teia2" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 657.548, 365.498 )
+
+[node name="Teia3" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 525.97, 323.393 )
+
+[node name="Teia4" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 499.654, 286.551 )
+
+[node name="Teia5" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 447.023, 306.551 )
+
+[node name="Teia6" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 524.917, 356.024 )
+
+[node name="Teia7" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 469.128, 351.814 )
+
+[node name="Teia8" parent="Teias" instance=ExtResource( 7 )]
+position = Vector2( 469.128, 351.814 )
+
 [node name="Buracos" type="Node2D" parent="."]
 
 [node name="Buraco" parent="Buracos" instance=ExtResource( 8 )]
 position = Vector2( 1015.98, 323.857 )
+
+[node name="Buraco2" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 730.718, 299.647 )
+
+[node name="Buraco3" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 926.507, 256.489 )
+
+[node name="Buraco4" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 924.401, 399.646 )
+
+[node name="Buraco5" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 992.822, 369.12 )
+
+[node name="Buraco6" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 852.823, 339.646 )
+
+[node name="Buraco7" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 795.981, 269.12 )
+
+[node name="Buraco8" parent="Buracos" instance=ExtResource( 8 )]
+position = Vector2( 795.981, 269.12 )
 
