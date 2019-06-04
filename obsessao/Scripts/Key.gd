@@ -60,3 +60,7 @@ func _on_Detector_body_entered(body):
 
 func _on_Detector_body_exited(body):
 	speed = 200
+
+
+func _on_DetectorWin_body_entered(body):
+	get_tree().change_scene(Global.VICTORY)

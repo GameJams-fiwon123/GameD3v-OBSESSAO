@@ -17,3 +17,6 @@ func _process(delta):
 	else:
 		$Sprite.flip_h = true
 	move_and_slide(motion.normalized() * speed)
+
+func _on_Detect_body_entered(body):
+	get_tree().change_scene(Global.GAME_OVER)
