@@ -53,6 +53,81 @@ position = Vector2( 1736.26, 705.887 )
 [node name="Position2D5" type="Position2D" parent="Navigation2D/Destinations"]
 position = Vector2( 1947.23, 242.708 )
 
+[node name="Position2D8" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 2222.32, 236.526 )
+
+[node name="Position2D9" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 2549.95, 387.978 )
+
+[node name="Position2D10" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 2828.12, 700.155 )
+
+[node name="Position2D11" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 3137.21, 774.336 )
+
+[node name="Position2D12" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 3387.57, 551.794 )
+
+[node name="Position2D13" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 3529.75, 338.525 )
+
+[node name="Position2D14" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 3702.84, 190.164 )
+
+[node name="Position2D15" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 4033.56, 251.981 )
+
+[node name="Position2D16" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 3894.47, 477.613 )
+
+[node name="Position2D17" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 4027.38, 771.245 )
+
+[node name="Position2D18" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 4367.37, 746.518 )
+
+[node name="Position2D19" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 4555.91, 610.52 )
+
+[node name="Position2D20" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 4840.27, 483.795 )
+
+[node name="Position2D21" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 5019.54, 715.609 )
+
+[node name="Position2D22" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 5226.63, 783.608 )
+
+[node name="Position2D23" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 5433.72, 499.249 )
+
+[node name="Position2D24" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 5723.26, 329.252 )
+
+[node name="Position2D25" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 6016.77, 641.403 )
+
+[node name="Position2D26" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 6487.33, 599.473 )
+
+[node name="Position2D27" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 7116.29, 287.321 )
+
+[node name="Position2D28" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 7875.71, 510.952 )
+
+[node name="Position2D29" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 8430.13, 543.565 )
+
+[node name="Position2D30" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 8914.66, 329.252 )
+
+[node name="Position2D31" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 9268.74, 469.021 )
+
+[node name="Position2D32" type="Position2D" parent="Navigation2D/Destinations"]
+position = Vector2( 9268.74, 469.021 )
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
