@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Andando_na_Vertical.png-208bd9350299b53b080efc4f737c202f.stex"
+path="res://.import/Buraco_280x70.png-4e2ec7cca46b69c73d8451eca40e9dc9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Andando_na_Vertical.png"
-dest_files=[ "res://.import/Andando_na_Vertical.png-208bd9350299b53b080efc4f737c202f.stex" ]
+source_file="res://GFX/Buraco_280x70.png"
+dest_files=[ "res://.import/Buraco_280x70.png-4e2ec7cca46b69c73d8451eca40e9dc9.stex" ]
 
 [params]
 
