@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pedra_rolando.png-cf0dbac500db846d30d0ba37bedcee47.stex"
+path="res://.import/tile003.png-3e8fadda42cf0d1857c4ff29d72347cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Pedra_rolando.png"
-dest_files=[ "res://.import/Pedra_rolando.png-cf0dbac500db846d30d0ba37bedcee47.stex" ]
+source_file="res://GFX/Teia/tile003.png"
+dest_files=[ "res://.import/tile003.png-3e8fadda42cf0d1857c4ff29d72347cb.stex" ]
 
 [params]
 

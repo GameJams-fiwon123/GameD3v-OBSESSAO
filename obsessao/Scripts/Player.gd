@@ -3,7 +3,9 @@ extends KinematicBody2D
 onready var sprite = $AnimatedSprite
 
 var motion = Vector2()
-var speed = 200
+
+var base_speed = 400
+var speed = 400
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,10 +19,12 @@ func _process(delta):
 func move():
 	if Input.is_action_pressed("right"):
 		motion.x = 1
-		sprite.play("right")
+		sprite.play("vertical")
+		sprite.flip_h = false
 	elif Input.is_action_pressed("left"):
 		motion.x = -1
-		sprite.play("left")
+		sprite.play("vertical")
+		sprite.flip_h = true
 	else:
 		motion.x = 0
 		
