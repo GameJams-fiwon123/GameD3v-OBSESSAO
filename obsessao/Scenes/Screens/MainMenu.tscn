@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Fonts/RPGSystem.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GFX/Fonts/zeldadxt.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -26,38 +26,47 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -266.0
-margin_top = -90.0
-margin_right = 266.0
-margin_bottom = 90.0
+margin_left = -400.0
+margin_top = -104.5
+margin_right = 400.0
+margin_bottom = 104.5
 custom_constants/separation = 30
 
 [node name="Title" type="Label" parent="ColorRect/VBoxContainer"]
-margin_right = 532.0
-margin_bottom = 68.0
+margin_right = 800.0
+margin_bottom = 60.0
 custom_fonts/font = SubResource( 1 )
 text = "OBSESAO GAME JAM"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/VBoxContainer"]
-margin_top = 98.0
-margin_right = 532.0
-margin_bottom = 180.0
+margin_top = 90.0
+margin_right = 800.0
+margin_bottom = 209.0
 custom_constants/separation = 10
 
 [node name="ButtonStart" type="Button" parent="ColorRect/VBoxContainer/VBoxContainer2"]
-margin_right = 532.0
-margin_bottom = 36.0
+margin_right = 800.0
+margin_bottom = 33.0
 custom_fonts/font = SubResource( 2 )
 text = "START"
 flat = true
 
 [node name="ButtonCredits" type="Button" parent="ColorRect/VBoxContainer/VBoxContainer2"]
-margin_top = 46.0
-margin_right = 532.0
-margin_bottom = 82.0
+margin_top = 43.0
+margin_right = 800.0
+margin_bottom = 76.0
 custom_fonts/font = SubResource( 2 )
 text = "CREDITS"
 flat = true
 
+[node name="ButtonExit" type="Button" parent="ColorRect/VBoxContainer/VBoxContainer2"]
+margin_top = 86.0
+margin_right = 800.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 2 )
+text = "EXIT"
+flat = true
+
 [connection signal="pressed" from="ColorRect/VBoxContainer/VBoxContainer2/ButtonStart" to="." method="_on_ButtonStart_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/VBoxContainer2/ButtonCredits" to="." method="_on_ButtonCredits_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/VBoxContainer2/ButtonExit" to="." method="_on_ButtonExit_pressed"]

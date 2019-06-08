@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GFX/Mapa/Cenario.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Ground.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 635.259, 308.138 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 639.924, 27.048 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 46.549, 365.315 )
+
+[node name="Ground" type="Sprite"]
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="Detect" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect"]
+position = Vector2( 637.992, 359.235 )
+shape = SubResource( 1 )
+
+[node name="Wals" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wals"]
+position = Vector2( 640.325, 22.1606 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Wals"]
+position = Vector2( 639.158, 700.974 )
+shape = SubResource( 2 )
+
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="DetecOut" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetecOut"]
+position = Vector2( -48.6286, 361.822 )
+shape = SubResource( 3 )
+disabled = true
+
+[connection signal="body_entered" from="Detect" to="." method="_on_Detect_body_entered"]
+[connection signal="area_entered" from="DetecOut" to="." method="_on_DetecOut_area_entered"]

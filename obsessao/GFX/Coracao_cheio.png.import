@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cenario_teste.png-308c30ca16fcff78dc0f6f1f03f6296c.stex"
+path="res://.import/Coracao_cheio.png-83b9a9cac0db0b32bd9daa116f6e0e3b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/cenario_teste.png"
-dest_files=[ "res://.import/cenario_teste.png-308c30ca16fcff78dc0f6f1f03f6296c.stex" ]
+source_file="res://GFX/Coracao_cheio.png"
+dest_files=[ "res://.import/Coracao_cheio.png-83b9a9cac0db0b32bd9daa116f6e0e3b.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

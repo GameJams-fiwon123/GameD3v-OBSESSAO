@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Buraco.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Buraco_280x70.png" type="Texture" id=2]
+[ext_resource path="res://SFX/SFX_-_Buraco.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 63.5598, 34.4384 )
@@ -16,8 +17,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Buraco_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

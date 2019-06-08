@@ -1,11 +1,15 @@
 extends KinematicBody2D
 
+var lifes = 3
+
 onready var sprite = $AnimatedSprite
 
 var motion = Vector2()
 
-var base_speed = 400
-var speed = 400
+var base_speed = 450
+var speed = 450
+
+var is_dead = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,8 +17,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	move()
-	move_and_slide(motion * speed)
+	if not is_dead:
+		move()
+		move_and_slide(motion * speed)
 
 func move():
 	if Input.is_action_pressed("right"):
@@ -36,3 +41,11 @@ func move():
 		sprite.play("up")
 	else:
 		motion.y = 0
+		
+func dead():
+	is_dead = true
+	sprite.play("dead")
+
+func _on_AnimatedSprite_animation_finished():
+	if sprite.animation == "dead":
+		get_tree().change_scene(Global.GAME_OVER)

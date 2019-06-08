@@ -1,7 +1,11 @@
 extends Node
 
+var game
+var hud
+
 var player
 var key
+var ghost
 var navigation
 var destinations
 

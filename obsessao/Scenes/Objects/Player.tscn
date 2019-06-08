@@ -1,46 +1,62 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Player/Up/tile000.png" type="Texture" id=2]
-[ext_resource path="res://GFX/Player/Up/tile001.png" type="Texture" id=3]
-[ext_resource path="res://GFX/Player/Up/tile002.png" type="Texture" id=4]
-[ext_resource path="res://GFX/Player/Up/tile003.png" type="Texture" id=5]
-[ext_resource path="res://GFX/Player/Vertical/tile000.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Player/Vertical/tile001.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Player/Vertical/tile002.png" type="Texture" id=8]
-[ext_resource path="res://GFX/Player/Vertical/tile003.png" type="Texture" id=9]
-[ext_resource path="res://GFX/Player/Down/tile000.png" type="Texture" id=10]
-[ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=11]
-[ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=12]
-[ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Shadow.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Player/Up/tile000.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Player/Up/tile001.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Player/Up/tile002.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Player/Up/tile003.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Player/Vertical/tile000.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Player/Vertical/tile001.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Player/Vertical/tile002.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Player/Vertical/tile003.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Player/Dead/tile000.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Player/Dead/tile001.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Player/Dead/tile002.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Player/Dead/tile003.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Player/Down/tile000.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "vertical",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "down",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9.21014, 10.5714 )
+extents = Vector2( 17.8804, 7.91563 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
 cull_mode = 1
-polygon = PoolVector2Array( -14.2588, 2.24302, -15.07, -8.96828, -7.65005, -14.8445, 8.18714, -14.6063, 14.3361, -8.99452, 14.684, 1.90776, 10.0447, 6.54703, 13.2922, 10.2584, 13.0603, 12.2301, 10.5087, 12.3461, 8.421, 10.8384, 8.30502, 14.4338, 3.08584, 14.6657, 2.62191, 12.5781, -2.48128, 12.3461, -3.6411, 14.0858, -8.0484, 14.2018, -8.39635, 10.6064, -10.6, 12.3461, -13.3836, 12.3461, -13.6155, 9.9105, -9.09224, 6.31506 )
+polygon = PoolVector2Array( -26.87, 2.24176, -27.0903, -11.5311, -17.5044, -21.7781, -5.27416, -26.1854, 14.3384, -24.2021, 27.2298, -11.7514, 27.3399, 2.24176, 15.6606, 14.6924, 6.29503, 18.1081, -6.04544, 18.1081, -18.1655, 14.472 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.196078 )
+position = Vector2( -0.467423, 27.9713 )
+scale = Vector2( 0.0691203, 0.0249519 )
+texture = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -49,10 +65,11 @@ frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.695309, 3.87292 )
+position = Vector2( -0.563122, 24.7708 )
 shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 z_as_relative = false
 occluder = SubResource( 3 )
 
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

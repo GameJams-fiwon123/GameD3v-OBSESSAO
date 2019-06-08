@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_-_flecha.ogg-3a68d2348abd388636b981f0295793e7.oggstr"
+
+[deps]
+
+source_file="res://SFX/SFX_-_flecha.ogg"
+dest_files=[ "res://.import/SFX_-_flecha.ogg-3a68d2348abd388636b981f0295793e7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

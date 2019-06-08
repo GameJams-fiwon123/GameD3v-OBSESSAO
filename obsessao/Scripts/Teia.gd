@@ -5,4 +5,4 @@ func _on_Teia_body_entered(body):
 
 
 func _on_Teia_body_exited(body):
-	body.speed = 200
+	body.speed = body.base_speed 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Item_perseguido.png-ff9f40c1d33ad3ba507234cf93223fcf.stex"
+path="res://.import/tile001.png-3de967de4fa0c57b981df38dce2e197d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Item_perseguido.png"
-dest_files=[ "res://.import/Item_perseguido.png-ff9f40c1d33ad3ba507234cf93223fcf.stex" ]
+source_file="res://GFX/Morcego/tile001.png"
+dest_files=[ "res://.import/tile001.png-3de967de4fa0c57b981df38dce2e197d.stex" ]
 
 [params]
 

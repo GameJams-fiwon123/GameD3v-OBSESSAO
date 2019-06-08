@@ -1,6 +1,8 @@
-extends KinematicBody2D
+extends Area2D
 
-var speed = 150
+var high_speed = 500
+var base_speed = 300
+var speed = high_speed
 
 var motion = Vector2()
 var possible_destination = []
@@ -9,6 +11,8 @@ var destination = Vector2()
 
 onready var player = Global.player
 
+func _ready():
+	Global.ghost = self
 
 func _process(delta):
 	motion = player.global_position - global_position 
@@ -16,7 +20,8 @@ func _process(delta):
 		$Sprite.flip_h = false
 	else:
 		$Sprite.flip_h = true
-	move_and_slide(motion.normalized() * speed)
+	global_position.x += motion.normalized().x * speed * delta
+	global_position.y += motion.normalized().y * speed * delta
 
-func _on_Detect_body_entered(body):
-	get_tree().change_scene(Global.GAME_OVER)
+func _on_Ghost_body_entered(body):
+	body.dead()

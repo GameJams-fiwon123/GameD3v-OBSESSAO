@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
-var speed = 200
+var base_speed = 400
+var speed = 400
 
 var motion = Vector2()
 var possible_destination = []
 var path = []
 var destination = Vector2()
+
+onready var sprite = $Sprite
 
 export var walk_slowdown = 0.5
 export var nav_stop_treshold = 5
@@ -55,12 +58,31 @@ func update_path():
 		path.remove(0)
 
 func _on_Detector_body_entered(body):
-	speed = 300
-
-
-func _on_Detector_body_exited(body):
-	speed = 200
+	speed = base_speed * 2
+	$Timer.start()
 
 
 func _on_DetectorWin_body_entered(body):
 	get_tree().change_scene(Global.VICTORY)
+
+
+func _on_Timer_timeout():
+	speed = base_speed
+
+
+func _on_DetectLight_body_entered(body):
+	Global.ghost.speed = Global.ghost.base_speed
+
+
+func _on_DetectLight_body_exited(body):
+	Global.ghost.speed = Global.ghost.high_speed
+
+
+
+func _on_TimerPiscada_timeout():
+	sprite.play("close")
+
+
+func _on_Sprite_animation_finished():
+	if sprite.animation == "close":
+		sprite.play("open")

@@ -64,6 +64,7 @@ jump={
 2d_physics/layer_2="treasure"
 2d_physics/layer_3="enemie"
 2d_physics/layer_4="objects"
+2d_physics/layer_5="arrow"
 
 [rendering]
 
