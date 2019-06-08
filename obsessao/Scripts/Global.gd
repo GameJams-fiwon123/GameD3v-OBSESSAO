@@ -9,6 +9,8 @@ var ghost
 var navigation
 var destinations
 
+onready var audio = $AudioStreamPlayer
+
 #Scenes
 var MAIN_MENU = "res://Scenes/Screens/MainMenu.tscn"
 var CREDITS = "res://Scenes/Screens/Credits.tscn"

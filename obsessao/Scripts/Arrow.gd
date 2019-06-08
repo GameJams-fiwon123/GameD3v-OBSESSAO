@@ -1,5 +1,7 @@
 extends Area2D
 
+onready var audio = $AudioStreamPlayer
+
 var base_speed = 600
 var speed = 0
 

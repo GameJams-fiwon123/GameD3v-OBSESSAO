@@ -1,5 +1,11 @@
 extends Control
 
+var music = "res://SFX/Screen/Tela_Inicial.wav"
+
+func _ready():
+	Global.audio.stream = load(music)
+	Global.audio.play()
+
 func _on_ButtonStart_pressed():
 	get_tree().change_scene(Global.LEVEL1)
 

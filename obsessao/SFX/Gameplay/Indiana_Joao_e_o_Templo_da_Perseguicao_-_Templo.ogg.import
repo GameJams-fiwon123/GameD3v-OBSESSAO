@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Indiana_Joao_e_o_Templo_da_Perseguicao_-_Templo.ogg-67c14b0a09670a61207aaf995089bf26.oggstr"
+
+[deps]
+
+source_file="res://SFX/Gameplay/Indiana_Joao_e_o_Templo_da_Perseguicao_-_Templo.ogg"
+dest_files=[ "res://.import/Indiana_Joao_e_o_Templo_da_Perseguicao_-_Templo.ogg-67c14b0a09670a61207aaf995089bf26.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
