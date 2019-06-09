@@ -6,8 +6,8 @@ onready var sprite = $AnimatedSprite
 
 var motion = Vector2()
 
-var base_speed = 450
-var speed = 450
+var base_speed = 400
+var speed = 400
 
 var is_dead = false
 
@@ -22,16 +22,17 @@ func _process(delta):
 		move_and_slide(motion * speed)
 
 func move():
+	motion.x
 	if Input.is_action_pressed("right"):
-		motion.x = 1
+		motion.x = 1.2
 		sprite.play("vertical")
 		sprite.flip_h = false
 	elif Input.is_action_pressed("left"):
-		motion.x = -1
+		motion.x = -1.2
 		sprite.play("vertical")
 		sprite.flip_h = true
 	else:
-		motion.x = 0
+		motion.x = 1
 		
 	if Input.is_action_pressed("down"):
 		motion.y = 1
