@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends RigidBody2D
 
 var speed = 300
 
@@ -21,4 +21,4 @@ func _process(delta):
 			1:
 				index = 0
 	
-	move_and_slide(motion * speed)
+	global_position += motion * speed * delta

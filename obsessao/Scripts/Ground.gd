@@ -5,8 +5,10 @@ func _on_Detect_body_entered(body):
 	for item in $Arrows.get_children():
 		item.speed = item.base_speed
 		item.audio.play()
+	
+	for item in $Pedras.get_children():
+		item.speed = item.base_speed
 
 
 func _on_DetecOut_area_entered(area):
-	for item in $Arrows.get_children():
 		area.queue_free()

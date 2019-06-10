@@ -37,6 +37,8 @@ shape = SubResource( 2 )
 
 [node name="Arrows" type="Node2D" parent="."]
 
+[node name="Pedras" type="Node2D" parent="."]
+
 [node name="DetecOut" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 16

@@ -6,11 +6,11 @@
 [ext_resource path="res://GFX/Player/Up/tile001.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Player/Up/tile002.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Player/Up/tile003.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Player/Vertical/tile000.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Player/Vertical/tile001.png" type="Texture" id=8]
-[ext_resource path="res://GFX/Player/Vertical/tile002.png" type="Texture" id=9]
-[ext_resource path="res://GFX/Player/Vertical/tile003.png" type="Texture" id=10]
-[ext_resource path="res://GFX/Player/Down/tile000.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Player/Down/tile000.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Player/Vertical/tile000.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Player/Vertical/tile001.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Player/Vertical/tile002.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Player/Vertical/tile003.png" type="Texture" id=11]
 [ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=12]
 [ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=13]
 [ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=14]
@@ -26,12 +26,17 @@ animations = [ {
 "name": "up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "vertical",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "down",
 "speed": 5.0

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-var base_speed = 450	
-var speed = 450
+var base_speed = 400
+var speed = 400
 
 var motion = Vector2()
 var possible_destination = []
@@ -63,7 +63,7 @@ func _on_Detector_body_entered(body):
 
 
 func _on_DetectorWin_body_entered(body):
-	get_tree().change_scene(Global.VICTORY)
+	get_tree().change_scene(Global.FINAL)
 
 
 func _on_Timer_timeout():
