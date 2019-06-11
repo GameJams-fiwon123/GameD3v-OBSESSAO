@@ -19,14 +19,41 @@ var index = 0
 onready var navigation = Global.navigation
 onready var available_destinations = Global.destinations
 
+onready var destinations_position = [Vector2(0, $Position.global_position.y),
+									 Vector2(0, $Position2.global_position.y)]
+									
+var index2 = 0
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	
+	var pos_ref = Vector2(0, global_position.y)
+
+	print(destinations_position[index2].distance_to(pos_ref))
+	if destinations_position[index2].distance_to(pos_ref) <= 10:
+		match index2:
+			0:
+				index2 = 1
+				motion.y = 0.5
+			1:
+				index2 = 0
+				motion.y = -0.5
+	
+	motion.x = 1
+	move_and_slide(motion * speed)
+
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.key = self
-	possible_destination = available_destinations.get_children()
-	make_path()
+	motion.y = -1
+#	possible_destination = available_destinations.get_children()
+#	make_path()
 
-func _process(delta):
-	navigate()
+#func _process(delta):
+#	navigate()
 	
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])
@@ -61,11 +88,7 @@ func update_path():
 func _on_Detector_body_entered(body):
 	speed = base_speed * 2
 	$Timer.start()
-	Global.ghost.speed = Global.ghost.base_speed
 	detector.disabled = true
-	
-func _on_Detector_body_exited(body):
-	Global.ghost.speed = Global.ghost.high_speed
 
 
 func _on_DetectorWin_body_entered(body):

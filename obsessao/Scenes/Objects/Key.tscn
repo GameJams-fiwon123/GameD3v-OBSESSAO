@@ -86,8 +86,8 @@ scale = Vector2( 0.05, 0.01 )
 texture = ExtResource( 10 )
 
 [node name="Light2D" parent="." instance=ExtResource( 11 )]
-position = Vector2( 5.16952, -1.94 )
-scale = Vector2( 3, 1 )
+position = Vector2( 0, 0 )
+scale = Vector2( 5, 1 )
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -95,9 +95,14 @@ scale = Vector2( 3, 1 )
 wait_time = 3.0
 autostart = true
 
+[node name="Position" type="Position2D" parent="."]
+position = Vector2( 0, -97.3735 )
+
+[node name="Position2" type="Position2D" parent="."]
+position = Vector2( 0, 130.309 )
+
 [connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
 [connection signal="body_entered" from="Detector" to="." method="_on_Detector_body_entered"]
-[connection signal="body_exited" from="Detector" to="." method="_on_Detector_body_exited"]
 [connection signal="body_entered" from="DetectorWin" to="." method="_on_DetectorWin_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="TimerPiscada" to="." method="_on_TimerPiscada_timeout"]

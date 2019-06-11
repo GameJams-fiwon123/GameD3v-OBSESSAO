@@ -1,8 +1,7 @@
 extends Area2D
 
-var high_speed = 510
-var base_speed = 500
-var speed = high_speed
+var base_speed = 900
+var speed = 900
 
 var motion = Vector2()
 var possible_destination = []
@@ -20,7 +19,7 @@ func _process(delta):
 		$Sprite.flip_h = false
 	else:
 		$Sprite.flip_h = true
-	global_position.x += motion.normalized().x * speed * delta
+		
 	global_position.y += motion.normalized().y * speed * delta
 
 func _on_Ghost_body_entered(body):
