@@ -51,7 +51,13 @@ func _process(delta):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.key = self
-	motion.y = -1
+	match index2:
+		0:
+			index2 = 1
+			motion.y = 0.5
+		1:
+			index2 = 0
+			motion.y = -0.5
 #	possible_destination = available_destinations.get_children()
 #	make_path()
 
