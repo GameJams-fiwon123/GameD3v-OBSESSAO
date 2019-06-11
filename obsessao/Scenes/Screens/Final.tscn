@@ -1,16 +1,16 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Final.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Final/Final_6.png" type="Texture" id=2]
-[ext_resource path="res://GFX/Final/Final_1.png" type="Texture" id=3]
-[ext_resource path="res://GFX/Final/Final_2.png" type="Texture" id=4]
-[ext_resource path="res://GFX/Final/Final_3.png" type="Texture" id=5]
-[ext_resource path="res://GFX/Final/Final_4.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Final/Final_5.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Final/Final_1.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Final/Final_2.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Final/Final_3.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Final/Final_4.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Final/Final_5.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Final/Final_6.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "start"
-length = 6.0
+length = 34.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:texture")
 tracks/0/interp = 1
@@ -18,10 +18,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5 ),
+"times": PoolRealArray( 0, 8, 13, 21, 25, 30 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 7, 8, 9, 12, 13, 14, 20, 21, 22, 24, 25, 26, 29, 30, 31 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
 [node name="Final" type="Control"]
@@ -37,5 +49,10 @@ texture = ExtResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "start"
 anims/start = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

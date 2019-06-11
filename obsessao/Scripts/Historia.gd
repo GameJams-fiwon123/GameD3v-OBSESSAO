@@ -1,6 +1,6 @@
 extends Control
 
-var audio_stream = "res://SFX/Historia/historia.wav"
+var audio_stream = "res://SFX/Historia/Historia_1.1.ogg"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

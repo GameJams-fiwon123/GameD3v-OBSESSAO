@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=2]
@@ -15,14 +15,20 @@
 [ext_resource path="res://Scenes/Objects/Block.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Objects/Morcego.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=15]
+[ext_resource path="res://GFX/Fonts/zeldadxt.ttf" type="DynamicFontData" id=16]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 353.535, 308.138 )
 
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 10003, 51.9994, 30711.1, 53.9164, 30711.1, 656.635, 10013.3, 252.409, 10001, 197.999, 3792.07, 618.165, 5234.53, 663.25, 3037.29, 650.042, 3622.43, 617.023, 9294.03, 612.505, 9388.93, 657.578, 8846.43, 673.28, 9071.12, 607.992, 9390, 523.997, 9285.91, 459.983, 8848.14, 600.955, 9077.43, 458.178, 8492.21, 543.518, 8481.72, 174.062, 9059.38, 399.516, 8689.53, 601.261, 8077.37, 596.974, 8242.51, 542.732, 9779.57, 251.506, 9762, 196.999, 9615.32, 265.044, 9615.32, 115.229, 9784.09, 405.833, 9675.23, 321.156, 9758.02, 54.7065, 9288, 51.9994, 9393.31, 110.717, 9293, 195.999, 9399.63, 262.336, 9281.4, 396.808, 9288.62, 247.896, 9459.45, 322.552, 9457.35, 469.901, 9836, 454.998, 9827, 661.997, 9677.33, 469.901, 9610, 668.997, 9607, 526.997, 9064, 196.999, 9059.38, 247.896, 8079, 130.148, 8241.9, 166.695, 7568.67, 519.826, 7176.38, 485.128, 7174.57, 245.967, 7572.92, 190.678, 8841, 54.9994, 9071.99, 55.8486, 8839.86, 123.62, 2203.96, 554.411, 2866.77, 526.609, 2866.75, 648.284, 2.17212, 653.695, 2037.25, 554.411, 3.80359, 59.9792, 2031.31, 174.455, 2865.4, 62.4538, 2193.43, 174.455, 2869.09, 208.724, 7913.61, 668.994, 7562.95, 668.136, 7921.33, 597.832, 7568.74, 54.3244, 7917, 55.2517, 7916.99, 133.226, 5395.34, 260.926, 5389.15, 56.473, 6645, 58.187, 6642.89, 197.789, 8689.53, 666.421, 8075.65, 668.136, 5235.47, 454.366, 3777.52, 138.853, 7408.02, 663.022, 6796.94, 664.103, 6801.84, 454.443, 7038.3, 486.933, 8077.52, 57.0452, 8687, 58.4258, 8686, 126.999, 6808.15, 192.525, 6808.15, 53.5786, 7415.02, 55.0295, 7412.29, 195.803, 7035.59, 250.479, 3020.89, 68.8004, 5232.24, 66.6698, 5231.21, 269.152, 3030.26, 526.976, 3026.89, 208.724, 6639, 659.998, 5391.29, 663.25, 5391.37, 457.872, 6639.39, 450.833, 3610.91, 138.954, 10008.8, 403.126, 10049, 457.998, 10056, 666.997, 7409.13, 516.762 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 13, 10, 9, 14 ), PoolIntArray( 12, 11, 15 ), PoolIntArray( 16, 12, 15, 17, 18, 19 ), PoolIntArray( 17, 15, 20, 21, 22 ), PoolIntArray( 4, 3, 23, 24 ), PoolIntArray( 25, 26, 24, 23, 27, 28 ), PoolIntArray( 29, 24, 26 ), PoolIntArray( 30, 29, 26, 31 ), PoolIntArray( 32, 30, 31, 33 ), PoolIntArray( 34, 35, 32, 33, 36, 37, 13, 14 ), PoolIntArray( 38, 39, 40, 28, 27 ), PoolIntArray( 40, 39, 41, 42 ), PoolIntArray( 37, 40, 42, 13 ), PoolIntArray( 43, 32, 35, 44 ), PoolIntArray( 45, 46, 22, 47, 48, 49, 50 ), PoolIntArray( 51, 52, 43, 53 ), PoolIntArray( 54, 55, 56, 57 ), PoolIntArray( 58, 54, 57 ), PoolIntArray( 58, 57, 59, 60 ), PoolIntArray( 60, 59, 61, 62 ), PoolIntArray( 54, 62, 61, 63, 55 ), PoolIntArray( 64, 65, 47, 66 ), PoolIntArray( 50, 67, 68, 69 ), PoolIntArray( 70, 71, 72, 73 ), PoolIntArray( 74, 75, 21, 20 ), PoolIntArray( 76, 6, 5, 77 ), PoolIntArray( 78, 79, 80, 81 ), PoolIntArray( 45, 82, 83, 84, 18, 46 ), PoolIntArray( 85, 86, 87, 88, 49, 89 ), PoolIntArray( 90, 91, 92, 77 ), PoolIntArray( 93, 55, 63, 94 ), PoolIntArray( 95, 96, 97, 98 ), PoolIntArray( 99, 8, 7, 93, 94 ), PoolIntArray( 99, 94, 90 ), PoolIntArray( 100, 3, 2, 101 ), PoolIntArray( 2, 102, 101 ), PoolIntArray( 100, 101, 38, 27 ), PoolIntArray( 25, 28, 36, 33 ), PoolIntArray( 34, 14, 16, 19 ), PoolIntArray( 44, 19, 18 ), PoolIntArray( 53, 43, 44, 18, 84 ), PoolIntArray( 22, 21, 66, 47 ), PoolIntArray( 48, 47, 103 ), PoolIntArray( 48, 103, 78, 81 ), PoolIntArray( 89, 81, 80 ), PoolIntArray( 89, 80, 98 ), PoolIntArray( 73, 85, 89, 98, 97, 70 ), PoolIntArray( 97, 76, 77, 92 ), PoolIntArray( 50, 69, 45 ), PoolIntArray( 88, 50, 49 ), PoolIntArray( 92, 70, 97 ), PoolIntArray( 99, 90, 77 ) ]
-outlines = [ PoolVector2Array( 3.80359, 59.9792, 2865.4, 62.4538, 2869.09, 208.724, 3026.89, 208.724, 3020.89, 68.8004, 5232.24, 66.6698, 5231.21, 269.152, 5395.34, 260.926, 5389.15, 56.473, 6645, 58.187, 6642.89, 197.789, 6808.15, 192.525, 6808.15, 53.5786, 7415.02, 55.0295, 7412.29, 195.803, 7572.92, 190.678, 7568.74, 54.3244, 7917, 55.2517, 7916.99, 133.226, 8079, 130.148, 8077.52, 57.0452, 8687, 58.4258, 8686, 126.999, 8839.86, 123.62, 8841, 54.9994, 9071.99, 55.8486, 9064, 196.999, 9293, 195.999, 9288, 51.9994, 9758.02, 54.7065, 9762, 196.999, 10001, 197.999, 10003, 51.9994, 30711.1, 53.9164, 30711.1, 656.635, 10056, 666.997, 10049, 457.998, 9836, 454.998, 9827, 661.997, 9610, 668.997, 9607, 526.997, 9390, 523.997, 9388.93, 657.578, 8846.43, 673.28, 8848.14, 600.955, 8689.53, 601.261, 8689.53, 666.421, 8075.65, 668.136, 8077.37, 596.974, 7921.33, 597.832, 7913.61, 668.994, 7562.95, 668.136, 7568.67, 519.826, 7409.13, 516.762, 7408.02, 663.022, 6796.94, 664.103, 6801.84, 454.443, 6639.39, 450.833, 6639, 659.998, 5391.29, 663.25, 5391.37, 457.872, 5235.47, 454.366, 5234.53, 663.25, 3037.29, 650.042, 3030.26, 526.976, 2866.77, 526.609, 2866.75, 648.284, 2.17212, 653.695 ), PoolVector2Array( 7035.59, 250.479, 7038.3, 486.933, 7176.38, 485.128, 7174.57, 245.967 ), PoolVector2Array( 8241.9, 166.695, 8242.51, 542.732, 8492.21, 543.518, 8481.72, 174.062 ), PoolVector2Array( 9779.57, 251.506, 9784.09, 405.833, 10008.8, 403.126, 10013.3, 252.409 ), PoolVector2Array( 9077.43, 458.178, 9071.12, 607.992, 9294.03, 612.505, 9285.91, 459.983 ), PoolVector2Array( 9059.38, 247.896, 9059.38, 399.516, 9281.4, 396.808, 9288.62, 247.896 ), PoolVector2Array( 9393.31, 110.717, 9399.63, 262.336, 9615.32, 265.044, 9615.32, 115.229 ), PoolVector2Array( 9459.45, 322.552, 9457.35, 469.901, 9677.33, 469.901, 9675.23, 321.156 ), PoolVector2Array( 2031.31, 174.455, 2037.25, 554.411, 2203.96, 554.411, 2193.43, 174.455 ), PoolVector2Array( 3610.91, 138.954, 3622.43, 617.023, 3792.07, 618.165, 3777.52, 138.853 ) ]
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 10013.3, 252.409, 10001, 197.999, 12071.6, 204.084, 12078.1, 491.863, 11522.4, 441.461, 3020.89, 68.8004, 4078.35, 67.7815, 3416.87, 103.495, 3246.46, 104.927, 3402.82, 618.764, 3631.46, 651.906, 3037.29, 650.042, 3245.16, 618.764, 8844.65, 413.03, 8645.63, 663.745, 8492.21, 543.518, 8481.72, 174.062, 8686, 126.999, 8242.51, 542.732, 8075.65, 668.136, 8077.37, 596.974, 9779.57, 251.506, 9762, 196.999, 9615.32, 265.044, 9615.32, 115.229, 9784.09, 405.833, 9675.23, 321.156, 9758.02, 54.7065, 9288, 51.9994, 9393.31, 110.717, 9291.8, 403.983, 9399.63, 262.336, 3029.08, 352.289, 3246.46, 199.436, 3243.87, 528.3, 3630.23, 524.222, 3401.53, 523.131, 9836, 454.998, 9827, 661.997, 9677.33, 469.901, 9610, 668.997, 9607, 526.997, 9457.35, 469.901, 9390, 523.997, 9388.93, 657.578, 9276.29, 662.453, 9276.29, 456.97, 7913.61, 668.994, 7562.95, 668.136, 7568.67, 519.826, 7921.33, 597.832, 7572.92, 190.678, 7568.74, 54.3244, 7917, 55.2517, 7924.49, 415.614, 5395.34, 260.926, 5389.15, 56.473, 6645, 58.187, 6642.89, 197.789, 7408.02, 663.022, 6796.94, 664.103, 6801.84, 454.443, 7038.3, 486.933, 9069.42, 666.826, 8846.43, 673.28, 9066.93, 459.554, 4090.63, 418.637, 3414, 206.596, 6808.15, 192.525, 6808.15, 53.5786, 7415.02, 55.0295, 7412.29, 195.803, 7174.57, 245.967, 7035.59, 250.479, 8077.52, 57.0452, 8687, 58.4258, 8241.9, 166.695, 12814.7, 662.06, 11519.8, 662.453, 17783, 306.175, 17780.1, 59.1481, 30711.1, 53.9164, 30711.1, 656.635, 19113.3, 460.827, 4448.08, 665.038, 4261.28, 413.726, 4261.98, 67.9726, 5232.24, 66.6698, 5231.21, 269.152, 5014.13, 463.431, 8841, 54.9994, 9071.99, 55.8486, 9069.51, 402.691, 8839.86, 123.62, 6639.39, 450.833, 6639, 659.998, 5391.29, 663.25, 5391.37, 457.872, 5235.47, 454.366, 5234.53, 663.25, 5014.14, 663.751, 2022.86, 656.391, 2.17212, 653.695, 3.80359, 59.9792, 2027.77, 168.982, 2393.11, 62.0454, 2189.84, 172.665, 16491.4, 660.946, 15356.8, 661.29, 15355.5, 411.737, 15975.9, 231.713, 19114.7, 668.966, 17657, 479.443, 17287.6, 59.3474, 16890.9, 364.886, 15978.7, 59.8769, 12371.5, 489.278, 12370.2, 204.962, 12371.5, 57.6338, 13874.5, 57.3291, 13875.8, 215.3, 13606.9, 398.814, 2874, 352.289, 2398.41, 649.169, 2193.52, 649.024, 2572.49, 62.2005, 2865.4, 62.4538, 17651.3, 670.522, 16895.2, 671.326, 3792.29, 655.589, 3791.06, 524.222, 7176.38, 485.128, 2580.63, 649.529, 2866.75, 648.284, 9459.45, 322.552, 10008.8, 403.126, 8079.58, 416.907, 7409.13, 516.762 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16, 17 ), PoolIntArray( 18, 15, 14, 19, 20 ), PoolIntArray( 1, 0, 21, 22 ), PoolIntArray( 23, 24, 22, 21, 25, 26 ), PoolIntArray( 27, 22, 24 ), PoolIntArray( 28, 27, 24, 29 ), PoolIntArray( 30, 28, 29, 31 ), PoolIntArray( 32, 5, 8, 33, 34 ), PoolIntArray( 35, 10, 9, 36 ), PoolIntArray( 37, 38, 39, 26, 25 ), PoolIntArray( 39, 38, 40, 41 ), PoolIntArray( 42, 39, 41, 43 ), PoolIntArray( 44, 45, 46, 43 ), PoolIntArray( 47, 48, 49, 50 ), PoolIntArray( 51, 52, 53, 54 ), PoolIntArray( 55, 56, 57, 58 ), PoolIntArray( 59, 60, 61, 62 ), PoolIntArray( 63, 64, 13, 65 ), PoolIntArray( 7, 6, 66, 67 ), PoolIntArray( 68, 69, 70, 71, 72, 73 ), PoolIntArray( 74, 75, 17, 16, 76 ), PoolIntArray( 77, 78, 4, 3 ), PoolIntArray( 79, 80, 81, 82, 83 ), PoolIntArray( 84, 85, 86, 87, 88, 89 ), PoolIntArray( 90, 91, 92, 93 ), PoolIntArray( 94, 95, 96, 97, 55 ), PoolIntArray( 98, 99, 100, 89, 88 ), PoolIntArray( 101, 102, 103, 104 ), PoolIntArray( 104, 103, 105, 106 ), PoolIntArray( 107, 108, 109, 110 ), PoolIntArray( 82, 111, 83 ), PoolIntArray( 79, 83, 112 ), PoolIntArray( 113, 79, 112, 114, 115 ), PoolIntArray( 116, 117, 118, 119, 120, 121, 77 ), PoolIntArray( 122, 123, 124, 106, 105, 125, 126 ), PoolIntArray( 127, 128, 114, 112 ), PoolIntArray( 115, 114, 107, 110 ), PoolIntArray( 120, 110, 109, 121 ), PoolIntArray( 84, 129, 130, 66, 85 ), PoolIntArray( 18, 49, 131, 72, 54 ), PoolIntArray( 132, 123, 122, 133 ), PoolIntArray( 12, 11, 133, 122, 32, 34 ), PoolIntArray( 36, 34, 33, 67, 66 ), PoolIntArray( 35, 36, 66, 130 ), PoolIntArray( 98, 88, 55, 97 ), PoolIntArray( 61, 94, 55, 58, 68, 73 ), PoolIntArray( 31, 134, 42, 43, 46, 30 ), PoolIntArray( 13, 17, 93, 92, 65 ), PoolIntArray( 71, 51, 54, 72 ), PoolIntArray( 3, 116, 77 ), PoolIntArray( 135, 0, 4 ), PoolIntArray( 135, 4, 37, 25 ), PoolIntArray( 23, 26, 134, 31 ), PoolIntArray( 92, 30, 46, 65 ), PoolIntArray( 136, 74, 76, 18 ), PoolIntArray( 54, 136, 18 ), PoolIntArray( 61, 73, 62 ), PoolIntArray( 59, 62, 131, 137 ), PoolIntArray( 18, 20, 50, 49 ), PoolIntArray( 137, 131, 49 ) ]
+outlines = [ PoolVector2Array( 3.80359, 59.9792, 2393.11, 62.0454, 2572.49, 62.2005, 2865.4, 62.4538, 2874, 352.289, 3029.08, 352.289, 3020.89, 68.8004, 4078.35, 67.7815, 4090.63, 418.637, 4261.28, 413.726, 4261.98, 67.9726, 5232.24, 66.6698, 5231.21, 269.152, 5395.34, 260.926, 5389.15, 56.473, 6645, 58.187, 6642.89, 197.789, 6808.15, 192.525, 6808.15, 53.5786, 7415.02, 55.0295, 7412.29, 195.803, 7572.92, 190.678, 7568.74, 54.3244, 7917, 55.2517, 7924.49, 415.614, 8079.58, 416.907, 8077.52, 57.0452, 8687, 58.4258, 8686, 126.999, 8839.86, 123.62, 8841, 54.9994, 9071.99, 55.8486, 9069.51, 402.691, 9291.8, 403.983, 9288, 51.9994, 9758.02, 54.7065, 9762, 196.999, 10001, 197.999, 12071.6, 204.084, 12078.1, 491.863, 12371.5, 489.278, 12370.2, 204.962, 12371.5, 57.6338, 13874.5, 57.3291, 13875.8, 215.3, 15975.9, 231.713, 15978.7, 59.8769, 17287.6, 59.3474, 17783, 306.175, 17780.1, 59.1481, 30711.1, 53.9164, 30711.1, 656.635, 19114.7, 668.966, 19113.3, 460.827, 17657, 479.443, 17651.3, 670.522, 16895.2, 671.326, 16890.9, 364.886, 16491.4, 660.946, 15356.8, 661.29, 15355.5, 411.737, 13606.9, 398.814, 12814.7, 662.06, 11519.8, 662.453, 11522.4, 441.461, 9836, 454.998, 9827, 661.997, 9610, 668.997, 9607, 526.997, 9390, 523.997, 9388.93, 657.578, 9276.29, 662.453, 9276.29, 456.97, 9066.93, 459.554, 9069.42, 666.826, 8846.43, 673.28, 8844.65, 413.03, 8645.63, 663.745, 8075.65, 668.136, 8077.37, 596.974, 7921.33, 597.832, 7913.61, 668.994, 7562.95, 668.136, 7568.67, 519.826, 7409.13, 516.762, 7408.02, 663.022, 6796.94, 664.103, 6801.84, 454.443, 6639.39, 450.833, 6639, 659.998, 5391.29, 663.25, 5391.37, 457.872, 5235.47, 454.366, 5234.53, 663.25, 5014.14, 663.751, 5014.13, 463.431, 4448.08, 665.038, 3792.29, 655.589, 3791.06, 524.222, 3630.23, 524.222, 3631.46, 651.906, 3037.29, 650.042, 2866.75, 648.284, 2580.63, 649.529, 2398.41, 649.169, 2193.52, 649.024, 2189.84, 172.665, 2027.77, 168.982, 2022.86, 656.391, 2.17212, 653.695 ), PoolVector2Array( 7035.59, 250.479, 7038.3, 486.933, 7176.38, 485.128, 7174.57, 245.967 ), PoolVector2Array( 8241.9, 166.695, 8242.51, 542.732, 8492.21, 543.518, 8481.72, 174.062 ), PoolVector2Array( 9779.57, 251.506, 9784.09, 405.833, 10008.8, 403.126, 10013.3, 252.409 ), PoolVector2Array( 9393.31, 110.717, 9399.63, 262.336, 9615.32, 265.044, 9615.32, 115.229 ), PoolVector2Array( 9459.45, 322.552, 9457.35, 469.901, 9677.33, 469.901, 9675.23, 321.156 ), PoolVector2Array( 3246.46, 104.927, 3246.46, 199.436, 3414, 206.596, 3416.87, 103.495 ), PoolVector2Array( 3243.87, 528.3, 3245.16, 618.764, 3402.82, 618.764, 3401.53, 523.131 ) ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 16 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -277,7 +283,7 @@ position = Vector2( 1869.57, 360.304 )
 position = Vector2( 26880, 0 )
 
 [node name="CollisionShape2D" parent="Mapa/Ground22/Detect" index="0"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Arrow" parent="Mapa/Ground22/Arrows" index="0" instance=ExtResource( 3 )]
 position = Vector2( 1840.08, 81.6223 )
@@ -331,11 +337,10 @@ position = Vector2( 28160, 0 )
 position = Vector2( 29440, 0 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
-visible = false
 script = ExtResource( 5 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-navpoly = SubResource( 1 )
+navpoly = SubResource( 2 )
 
 [node name="Destinations" type="Node2D" parent="Navigation2D"]
 script = ExtResource( 6 )
@@ -546,7 +551,6 @@ position = Vector2( 30206.5, 572.373 )
 position = Vector2( 29500.7, 642.179 )
 
 [node name="Buracos" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Buraco" parent="Buracos" instance=ExtResource( 12 )]
 position = Vector2( 2110.43, 500.908 )
@@ -1159,6 +1163,9 @@ position = Vector2( 30654, 638.481 )
 [node name="Morcego" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 15672.9, 86.8706 )
 
+[node name="Sprite" parent="Morcegos/Morcego" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego" index="2"]
 position = Vector2( 2.52527, -22.4729 )
 
@@ -1167,6 +1174,9 @@ position = Vector2( 11.6752, 580.685 )
 
 [node name="Morcego2" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16060.6, 179.665 )
+
+[node name="Sprite" parent="Morcegos/Morcego2" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego2" index="2"]
 position = Vector2( -4.8927, -114.867 )
@@ -1177,6 +1187,9 @@ position = Vector2( 3.64691, 109.444 )
 [node name="Morcego3" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16065.5, 509.722 )
 
+[node name="Sprite" parent="Morcegos/Morcego3" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego3" index="2"]
 position = Vector2( -3.72766, -95.0393 )
 
@@ -1185,6 +1198,9 @@ position = Vector2( 2.48089, 143.268 )
 
 [node name="Morcego4" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16317.8, 624.961 )
+
+[node name="Sprite" parent="Morcegos/Morcego4" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego4" index="2"]
 position = Vector2( -13.0587, -556.913 )
@@ -1195,6 +1211,9 @@ position = Vector2( 1.56683, 38.3646 )
 [node name="Morcego6" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 17786, 439.559 )
 
+[node name="Sprite" parent="Morcegos/Morcego6" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego6" index="2"]
 position = Vector2( 1.97253, -301.376 )
 
@@ -1203,6 +1222,9 @@ position = Vector2( 4.90667, 153.607 )
 
 [node name="Morcego7" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16899.1, 297.593 )
+
+[node name="Sprite" parent="Morcegos/Morcego7" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego7" index="2"]
 position = Vector2( -3.03918, -161.081 )
@@ -1214,7 +1236,7 @@ position = Vector2( 3.23675, 295.572 )
 position = Vector2( 18104.9, 218.76 )
 
 [node name="Sprite" parent="Morcegos/Morcego8" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego8" index="2"]
 position = Vector2( 4.96082, -85.0809 )
@@ -1226,7 +1248,7 @@ position = Vector2( 3.23675, 89.5726 )
 position = Vector2( 18108.7, 503.077 )
 
 [node name="Sprite" parent="Morcegos/Morcego9" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego9" index="2"]
 position = Vector2( -0.0391846, -88.0809 )
@@ -1237,6 +1259,9 @@ position = Vector2( 2.23675, 88.5726 )
 [node name="Morcego10" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18486.1, 367.38 )
 
+[node name="Sprite" parent="Morcegos/Morcego10" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego10" index="2"]
 position = Vector2( 3.96082, -96.0808 )
 
@@ -1245,6 +1270,9 @@ position = Vector2( 8.23675, 86.5726 )
 
 [node name="Morcego11" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18878.1, 235.221 )
+
+[node name="Sprite" parent="Morcegos/Morcego11" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego11" index="2"]
 position = Vector2( -3.03918, -100.081 )
@@ -1255,6 +1283,9 @@ position = Vector2( 0.236753, 80.5726 )
 [node name="Morcego12" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18880.3, 510.831 )
 
+[node name="Sprite" parent="Morcegos/Morcego12" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego12" index="2"]
 position = Vector2( -3.03918, -99.0808 )
 
@@ -1263,6 +1294,9 @@ position = Vector2( -0.763247, 81.5727 )
 
 [node name="Morcego13" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19391, 88.8915 )
+
+[node name="Sprite" parent="Morcegos/Morcego13" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego13" index="2"]
 position = Vector2( -1.81262, -25.4168 )
@@ -1273,6 +1307,9 @@ position = Vector2( 1.69183, 557.934 )
 [node name="Morcego14" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19648.9, 227.626 )
 
+[node name="Sprite" parent="Morcegos/Morcego14" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego14" index="2"]
 position = Vector2( -4.26575, -162.923 )
 
@@ -1281,6 +1318,9 @@ position = Vector2( 6.60394, 424.111 )
 
 [node name="Morcego15" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19518.7, 647.511 )
+
+[node name="Sprite" parent="Morcegos/Morcego15" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego15" index="2"]
 position = Vector2( -7.95129, -584.036 )
@@ -1292,7 +1332,7 @@ position = Vector2( 1.69183, 15.275 )
 position = Vector2( 19772.9, 496.499 )
 
 [node name="Sprite" parent="Morcegos/Morcego16" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego16" index="2"]
 position = Vector2( -4.2677, -433.025 )
@@ -1303,6 +1343,9 @@ position = Vector2( 4.14691, 165.059 )
 [node name="Morcego17" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19901.8, 361.449 )
 
+[node name="Sprite" parent="Morcegos/Morcego17" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego17" index="2"]
 position = Vector2( -3.03918, -299.202 )
 
@@ -1311,6 +1354,9 @@ position = Vector2( 11.5141, 297.654 )
 
 [node name="Morcego18" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 20034.4, 361.449 )
+
+[node name="Sprite" parent="Morcegos/Morcego18" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego18" index="2"]
 position = Vector2( -6.72278, -297.974 )
@@ -1321,6 +1367,9 @@ position = Vector2( 10.2856, 303.793 )
 [node name="Morcego19" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 20140, 219.031 )
 
+[node name="Sprite" parent="Morcegos/Morcego19" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego19" index="2"]
 position = Vector2( -1.81067, -161.695 )
 
@@ -1329,6 +1378,9 @@ position = Vector2( 18.8793, 438.844 )
 
 [node name="Morcego20" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 20283.6, 507.549 )
+
+[node name="Sprite" parent="Morcegos/Morcego20" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego20" index="2"]
 position = Vector2( -11.6329, -445.302 )
@@ -1339,6 +1391,9 @@ position = Vector2( 2.92035, 149.098 )
 [node name="Morcego21" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 23225.9, 498.505 )
 
+[node name="Sprite" parent="Morcegos/Morcego21" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego21" index="2"]
 position = Vector2( 0.644409, -92.9422 )
 
@@ -1347,6 +1402,9 @@ position = Vector2( 2.92035, 96.3055 )
 
 [node name="Morcego22" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 23232, 221.155 )
+
+[node name="Sprite" parent="Morcegos/Morcego22" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego22" index="2"]
 position = Vector2( -4.2677, -88.0313 )
@@ -1358,7 +1416,7 @@ position = Vector2( -0.763247, 87.7113 )
 position = Vector2( 23488.2, 365.859 )
 
 [node name="Sprite" parent="Morcegos/Morcego23" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego23" index="2"]
 position = Vector2( -5.49426, -302.885 )
@@ -1370,7 +1428,7 @@ position = Vector2( -0.763247, 293.971 )
 position = Vector2( 24505.3, 227.235 )
 
 [node name="Sprite" parent="Morcegos/Morcego24" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego24" index="2"]
 position = Vector2( -3.98645, -156.673 )
@@ -1381,6 +1439,9 @@ position = Vector2( -0.763247, 82.9437 )
 [node name="Morcego25" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24507, 507.825 )
 
+[node name="Sprite" parent="Morcegos/Morcego25" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego25" index="2"]
 position = Vector2( -0.972778, -93.3651 )
 
@@ -1389,6 +1450,9 @@ position = Vector2( 2.25043, 153.788 )
 
 [node name="Morcego26" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24764.2, 78.5887 )
+
+[node name="Sprite" parent="Morcegos/Morcego26" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego26" index="2"]
 position = Vector2( 1.78894, -15.5537 )
@@ -1399,6 +1463,9 @@ position = Vector2( 3.11371, 97.5331 )
 [node name="Morcego27" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24769.2, 364.189 )
 
+[node name="Sprite" parent="Morcegos/Morcego27" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego27" index="2"]
 position = Vector2( -4.20129, -97.4008 )
 
@@ -1407,6 +1474,9 @@ position = Vector2( -0.763247, 91.0714 )
 
 [node name="Morcego28" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24767.6, 646.449 )
+
+[node name="Sprite" parent="Morcegos/Morcego28" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego28" index="2"]
 position = Vector2( -3.27942, -99.0072 )
@@ -1417,6 +1487,9 @@ position = Vector2( 0.344175, 15.8551 )
 [node name="Morcego29" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25024.8, 502.814 )
 
+[node name="Sprite" parent="Morcegos/Morcego29" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego29" index="2"]
 position = Vector2( -2.77356, -441.643 )
 
@@ -1425,6 +1498,9 @@ position = Vector2( -3.48395, -194.402 )
 
 [node name="Morcego30" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25021.4, 220.554 )
+
+[node name="Sprite" parent="Morcegos/Morcego30" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego30" index="2"]
 position = Vector2( -2.77356, 185.488 )
@@ -1435,6 +1511,9 @@ position = Vector2( 6.03949, 443.612 )
 [node name="Morcego31" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25280.3, 81.9291 )
 
+[node name="Sprite" parent="Morcegos/Morcego31" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego31" index="2"]
 position = Vector2( -2.77356, -18.5673 )
 
@@ -1444,6 +1523,9 @@ position = Vector2( -3.48395, 92.6359 )
 [node name="Morcego32" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25275.3, 365.859 )
 
+[node name="Sprite" parent="Morcegos/Morcego32" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego32" index="2"]
 position = Vector2( -1.41418, -100.19 )
 
@@ -1452,6 +1534,9 @@ position = Vector2( 1.95746, 91.2755 )
 
 [node name="Morcego33" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25277, 643.109 )
+
+[node name="Sprite" parent="Morcegos/Morcego33" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego33" index="2"]
 position = Vector2( 1.30847, -93.3878 )
@@ -1463,7 +1548,7 @@ position = Vector2( 1.95746, 19.1758 )
 position = Vector2( 25537.5, 222.224 )
 
 [node name="Sprite" parent="Morcegos/Morcego34" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego34" index="2"]
 position = Vector2( -5.49426, -154.604 )
@@ -1475,7 +1560,7 @@ position = Vector2( -3.48395, 89.9151 )
 position = Vector2( 25537.5, 502.814 )
 
 [node name="Sprite" parent="Morcegos/Morcego35" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego35" index="2"]
 position = Vector2( -2.77356, -93.3877 )
@@ -1487,7 +1572,7 @@ position = Vector2( 1.95746, 153.853 )
 position = Vector2( 28604.7, 86.8164 )
 
 [node name="Sprite" parent="Morcegos/Morcego36" index="0"]
-frame = 0
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego36" index="2"]
 position = Vector2( 1.98621, -14.0542 )
@@ -1498,6 +1583,9 @@ position = Vector2( -1.21637, 555.281 )
 [node name="Morcego37" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 28726.9, 643.738 )
 
+[node name="Sprite" parent="Morcegos/Morcego37" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego37" index="2"]
 position = Vector2( 0.400268, -563.042 )
 
@@ -1507,6 +1595,9 @@ position = Vector2( 3.54535, 4.70596 )
 [node name="Morcego38" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 28980.8, 638.978 )
 
+[node name="Sprite" parent="Morcegos/Morcego38" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego38" index="2"]
 position = Vector2( 8.33582, -553.522 )
 
@@ -1515,6 +1606,9 @@ position = Vector2( 3.5434, 3.11929 )
 
 [node name="Morcego39" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 29125.1, 80.4697 )
+
+[node name="Sprite" parent="Morcegos/Morcego39" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego39" index="2"]
 position = Vector2( -1.18762, 1.81252 )
@@ -1620,6 +1714,18 @@ position = Vector2( 25283, 214.046 )
 
 [node name="Spike32" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 25539.6, 355.174 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -355.889
+margin_top = 202.3
+margin_right = -110.889
+margin_bottom = 289.3
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "    W  
+A  S  D"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 
 [editable path="Mapa/Ground9"]

@@ -1,7 +1,7 @@
 extends Area2D
 
-var high_speed = 500
-var base_speed = 300
+var high_speed = 510
+var base_speed = 500
 var speed = high_speed
 
 var motion = Vector2()
