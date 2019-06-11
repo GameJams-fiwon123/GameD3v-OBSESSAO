@@ -1,12 +1,11 @@
 extends Control
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var audio_stream = "res://SFX/Historia/historia.wav"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Global.audio.stream = load(audio_stream)
+	Global.audio.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -14,4 +13,8 @@ func _ready():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
+	get_tree().change_scene(Global.LEVEL1)
+
+
+func _on_ButtonSkip_pressed():
 	get_tree().change_scene(Global.LEVEL1)

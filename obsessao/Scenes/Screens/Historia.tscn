@@ -1,17 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Historia.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Historia/Historia_pagina_6.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Historia/Historia_pagina_1.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Historia/Historia_pagina_2.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Historia/Historia_pagina_3.png" type="Texture" id=5]
-[ext_resource path="res://GFX/Historia/Historia_pagina_4.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Historia/Historia_pagina_5.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Historia/Historia_pagina_5.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Historia/Historia_pagina_4.png" type="Texture" id=7]
 [ext_resource path="res://SFX/Fantasma.wav" type="AudioStream" id=8]
+[ext_resource path="res://GFX/Fonts/zeldadxt.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "start"
-length = 12.0
+length = 46.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:texture")
 tracks/0/interp = 1
@@ -19,7 +20,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5 ),
+"times": PoolRealArray( 0, 10, 16, 20, 30, 40 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
@@ -31,10 +32,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 40 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("AudioStreamPlayer:stream")
@@ -43,11 +44,27 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 4.9 ),
+"times": PoolRealArray( 39.6 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ ExtResource( 8 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 9, 10, 11, 15, 16, 17, 19, 20, 21, 29, 30, 31, 39, 40, 41 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 9 )
 
 [node name="Historia" type="Control"]
 anchor_right = 1.0
@@ -65,5 +82,21 @@ anims/start = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -10.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="ButtonSkip" type="Button" parent="."]
+margin_left = 1056.22
+margin_top = 644.975
+margin_right = 1213.22
+margin_bottom = 685.975
+custom_fonts/font = SubResource( 2 )
+text = "Pular"
+flat = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="pressed" from="ButtonSkip" to="." method="_on_ButtonSkip_pressed"]
