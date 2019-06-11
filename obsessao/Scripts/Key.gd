@@ -26,21 +26,21 @@ var index2 = 0
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Global.game.start_game:
+		var pos_ref = Vector2(0, global_position.y)
 	
-	var pos_ref = Vector2(0, global_position.y)
-
-	print(destinations_position[index2].distance_to(pos_ref))
-	if destinations_position[index2].distance_to(pos_ref) <= 10:
-		match index2:
-			0:
-				index2 = 1
-				motion.y = 0.5
-			1:
-				index2 = 0
-				motion.y = -0.5
-	
-	motion.x = 1
-	move_and_slide(motion * speed)
+		print(destinations_position[index2].distance_to(pos_ref))
+		if destinations_position[index2].distance_to(pos_ref) <= 10:
+			match index2:
+				0:
+					index2 = 1
+					motion.y = 0.5
+				1:
+					index2 = 0
+					motion.y = -0.5
+		
+		motion.x = 1
+		move_and_slide(motion * speed)
 
 
 

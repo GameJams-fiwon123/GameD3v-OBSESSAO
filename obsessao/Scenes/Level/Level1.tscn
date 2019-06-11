@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Scenes/Objects/Key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Objects/Ghost.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Objects/HUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Objects/Teia.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Objects/Buraco.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Objects/Block.tscn" type="PackedScene" id=14]
@@ -28,8 +28,67 @@ outlines = [ PoolVector2Array( 3.80359, 59.9792, 5232.24, 66.6698, 5231.21, 269.
 
 [sub_resource type="DynamicFont" id=3]
 size = 50
-outline_color = Color( 0, 0, 0, 1 )
+outline_size = 2
 font_data = ExtResource( 17 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "start"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/Key:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -242.882, 342.788 ), Vector2( 1218.05, 342.788 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("YSort/Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -770.374, 340.142 ), Vector2( 549.003, 334.53 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "finish_animation"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "tutorial"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -352,11 +411,11 @@ position = Vector2( 30263.5, 345.086 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 410.302, 348.776 )
+position = Vector2( -506.499, 339.02 )
 z_index = 1
 
 [node name="Key" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 618.343, 342.788 )
+position = Vector2( 49.3053, 342.788 )
 z_index = 1
 
 [node name="Position" parent="YSort/Key" index="9"]
@@ -1166,7 +1225,7 @@ editor/display_folded = true
 position = Vector2( 15672.9, 86.8706 )
 
 [node name="Sprite" parent="Morcegos/Morcego" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego" index="2"]
 position = Vector2( 2.52527, -22.4729 )
@@ -1178,7 +1237,7 @@ position = Vector2( 11.6752, 580.685 )
 position = Vector2( 16060.6, 179.665 )
 
 [node name="Sprite" parent="Morcegos/Morcego2" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego2" index="2"]
 position = Vector2( -4.8927, -114.867 )
@@ -1190,7 +1249,7 @@ position = Vector2( 3.64691, 109.444 )
 position = Vector2( 16065.5, 509.722 )
 
 [node name="Sprite" parent="Morcegos/Morcego3" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego3" index="2"]
 position = Vector2( -3.72766, -95.0393 )
@@ -1202,7 +1261,7 @@ position = Vector2( 2.48089, 143.268 )
 position = Vector2( 16317.8, 624.961 )
 
 [node name="Sprite" parent="Morcegos/Morcego4" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego4" index="2"]
 position = Vector2( -13.0587, -556.913 )
@@ -1214,7 +1273,7 @@ position = Vector2( 1.56683, 38.3646 )
 position = Vector2( 17786, 439.559 )
 
 [node name="Sprite" parent="Morcegos/Morcego6" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego6" index="2"]
 position = Vector2( 1.97253, -301.376 )
@@ -1226,7 +1285,7 @@ position = Vector2( 4.90667, 153.607 )
 position = Vector2( 16899.1, 297.593 )
 
 [node name="Sprite" parent="Morcegos/Morcego7" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego7" index="2"]
 position = Vector2( -3.03918, -161.081 )
@@ -1238,7 +1297,7 @@ position = Vector2( 3.23675, 295.572 )
 position = Vector2( 18104.9, 218.76 )
 
 [node name="Sprite" parent="Morcegos/Morcego8" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego8" index="2"]
 position = Vector2( 4.96082, -85.0809 )
@@ -1250,7 +1309,7 @@ position = Vector2( 3.23675, 89.5726 )
 position = Vector2( 18108.7, 503.077 )
 
 [node name="Sprite" parent="Morcegos/Morcego9" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego9" index="2"]
 position = Vector2( -0.0391846, -88.0809 )
@@ -1262,7 +1321,7 @@ position = Vector2( 2.23675, 88.5726 )
 position = Vector2( 18486.1, 367.38 )
 
 [node name="Sprite" parent="Morcegos/Morcego10" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego10" index="2"]
 position = Vector2( 3.96082, -96.0808 )
@@ -1274,7 +1333,7 @@ position = Vector2( 8.23675, 86.5726 )
 position = Vector2( 18878.1, 235.221 )
 
 [node name="Sprite" parent="Morcegos/Morcego11" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego11" index="2"]
 position = Vector2( -3.03918, -100.081 )
@@ -1286,7 +1345,7 @@ position = Vector2( 0.236753, 80.5726 )
 position = Vector2( 18880.3, 510.831 )
 
 [node name="Sprite" parent="Morcegos/Morcego12" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego12" index="2"]
 position = Vector2( -3.03918, -99.0808 )
@@ -1298,7 +1357,7 @@ position = Vector2( -0.763247, 81.5727 )
 position = Vector2( 19391, 88.8915 )
 
 [node name="Sprite" parent="Morcegos/Morcego13" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego13" index="2"]
 position = Vector2( -1.81262, -25.4168 )
@@ -1310,7 +1369,7 @@ position = Vector2( 1.69183, 557.934 )
 position = Vector2( 19648.9, 227.626 )
 
 [node name="Sprite" parent="Morcegos/Morcego14" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego14" index="2"]
 position = Vector2( -4.26575, -162.923 )
@@ -1322,7 +1381,7 @@ position = Vector2( 6.60394, 424.111 )
 position = Vector2( 19518.7, 647.511 )
 
 [node name="Sprite" parent="Morcegos/Morcego15" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego15" index="2"]
 position = Vector2( -7.95129, -584.036 )
@@ -1334,7 +1393,7 @@ position = Vector2( 1.69183, 15.275 )
 position = Vector2( 19772.9, 496.499 )
 
 [node name="Sprite" parent="Morcegos/Morcego16" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego16" index="2"]
 position = Vector2( -4.2677, -433.025 )
@@ -1346,7 +1405,7 @@ position = Vector2( 4.14691, 165.059 )
 position = Vector2( 19901.8, 361.449 )
 
 [node name="Sprite" parent="Morcegos/Morcego17" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego17" index="2"]
 position = Vector2( -3.03918, -299.202 )
@@ -1358,7 +1417,7 @@ position = Vector2( 11.5141, 297.654 )
 position = Vector2( 20034.4, 361.449 )
 
 [node name="Sprite" parent="Morcegos/Morcego18" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego18" index="2"]
 position = Vector2( -6.72278, -297.974 )
@@ -1370,7 +1429,7 @@ position = Vector2( 10.2856, 303.793 )
 position = Vector2( 20140, 219.031 )
 
 [node name="Sprite" parent="Morcegos/Morcego19" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego19" index="2"]
 position = Vector2( -1.81067, -161.695 )
@@ -1382,7 +1441,7 @@ position = Vector2( 18.8793, 438.844 )
 position = Vector2( 20283.6, 507.549 )
 
 [node name="Sprite" parent="Morcegos/Morcego20" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego20" index="2"]
 position = Vector2( -11.6329, -445.302 )
@@ -1394,7 +1453,7 @@ position = Vector2( 2.92035, 149.098 )
 position = Vector2( 23225.9, 498.505 )
 
 [node name="Sprite" parent="Morcegos/Morcego21" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego21" index="2"]
 position = Vector2( 0.644409, -92.9422 )
@@ -1406,7 +1465,7 @@ position = Vector2( 2.92035, 96.3055 )
 position = Vector2( 23232, 221.155 )
 
 [node name="Sprite" parent="Morcegos/Morcego22" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego22" index="2"]
 position = Vector2( -4.2677, -88.0313 )
@@ -1418,7 +1477,7 @@ position = Vector2( -0.763247, 87.7113 )
 position = Vector2( 23488.2, 365.859 )
 
 [node name="Sprite" parent="Morcegos/Morcego23" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego23" index="2"]
 position = Vector2( -5.49426, -302.885 )
@@ -1430,7 +1489,7 @@ position = Vector2( -0.763247, 293.971 )
 position = Vector2( 24505.3, 227.235 )
 
 [node name="Sprite" parent="Morcegos/Morcego24" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego24" index="2"]
 position = Vector2( -3.98645, -156.673 )
@@ -1442,7 +1501,7 @@ position = Vector2( -0.763247, 82.9437 )
 position = Vector2( 24507, 507.825 )
 
 [node name="Sprite" parent="Morcegos/Morcego25" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego25" index="2"]
 position = Vector2( -0.972778, -93.3651 )
@@ -1454,7 +1513,7 @@ position = Vector2( 2.25043, 153.788 )
 position = Vector2( 24764.2, 78.5887 )
 
 [node name="Sprite" parent="Morcegos/Morcego26" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego26" index="2"]
 position = Vector2( 1.78894, -15.5537 )
@@ -1466,7 +1525,7 @@ position = Vector2( 3.11371, 97.5331 )
 position = Vector2( 24769.2, 364.189 )
 
 [node name="Sprite" parent="Morcegos/Morcego27" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego27" index="2"]
 position = Vector2( -4.20129, -97.4008 )
@@ -1478,7 +1537,7 @@ position = Vector2( -0.763247, 91.0714 )
 position = Vector2( 24767.6, 646.449 )
 
 [node name="Sprite" parent="Morcegos/Morcego28" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego28" index="2"]
 position = Vector2( -3.27942, -99.0072 )
@@ -1490,7 +1549,7 @@ position = Vector2( 0.344175, 15.8551 )
 position = Vector2( 25024.8, 502.814 )
 
 [node name="Sprite" parent="Morcegos/Morcego29" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego29" index="2"]
 position = Vector2( -2.77356, -441.643 )
@@ -1502,7 +1561,7 @@ position = Vector2( -3.48395, -194.402 )
 position = Vector2( 25021.4, 220.554 )
 
 [node name="Sprite" parent="Morcegos/Morcego30" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego30" index="2"]
 position = Vector2( -2.77356, 185.488 )
@@ -1514,7 +1573,7 @@ position = Vector2( 6.03949, 443.612 )
 position = Vector2( 25280.3, 81.9291 )
 
 [node name="Sprite" parent="Morcegos/Morcego31" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego31" index="2"]
 position = Vector2( -2.77356, -18.5673 )
@@ -1526,7 +1585,7 @@ position = Vector2( -3.48395, 92.6359 )
 position = Vector2( 25275.3, 365.859 )
 
 [node name="Sprite" parent="Morcegos/Morcego32" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego32" index="2"]
 position = Vector2( -1.41418, -100.19 )
@@ -1538,7 +1597,7 @@ position = Vector2( 1.95746, 91.2755 )
 position = Vector2( 25277, 643.109 )
 
 [node name="Sprite" parent="Morcegos/Morcego33" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego33" index="2"]
 position = Vector2( 1.30847, -93.3878 )
@@ -1550,7 +1609,7 @@ position = Vector2( 1.95746, 19.1758 )
 position = Vector2( 25537.5, 222.224 )
 
 [node name="Sprite" parent="Morcegos/Morcego34" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego34" index="2"]
 position = Vector2( -5.49426, -154.604 )
@@ -1562,7 +1621,7 @@ position = Vector2( -3.48395, 89.9151 )
 position = Vector2( 25537.5, 502.814 )
 
 [node name="Sprite" parent="Morcegos/Morcego35" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego35" index="2"]
 position = Vector2( -2.77356, -93.3877 )
@@ -1574,7 +1633,7 @@ position = Vector2( 1.95746, 153.853 )
 position = Vector2( 28604.7, 86.8164 )
 
 [node name="Sprite" parent="Morcegos/Morcego36" index="0"]
-frame = 2
+frame = 3
 
 [node name="Position" parent="Morcegos/Morcego36" index="2"]
 position = Vector2( 1.98621, -14.0542 )
@@ -1586,7 +1645,7 @@ position = Vector2( -1.21637, 555.281 )
 position = Vector2( 28726.9, 643.738 )
 
 [node name="Sprite" parent="Morcegos/Morcego37" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego37" index="2"]
 position = Vector2( 0.400268, -563.042 )
@@ -1598,7 +1657,7 @@ position = Vector2( 3.54535, 4.70596 )
 position = Vector2( 28980.8, 638.978 )
 
 [node name="Sprite" parent="Morcegos/Morcego38" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego38" index="2"]
 position = Vector2( 8.33582, -553.522 )
@@ -1610,7 +1669,7 @@ position = Vector2( 3.5434, 3.11929 )
 position = Vector2( 29125.1, 80.4697 )
 
 [node name="Sprite" parent="Morcegos/Morcego39" index="0"]
-frame = 1
+frame = 2
 
 [node name="Position" parent="Morcegos/Morcego39" index="2"]
 position = Vector2( -1.18762, 1.81252 )
@@ -1718,16 +1777,20 @@ position = Vector2( 25283, 214.046 )
 position = Vector2( 25539.6, 355.174 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -355.889
-margin_top = 202.3
-margin_right = -110.889
-margin_bottom = 289.3
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 425.912
+margin_top = 208.129
+margin_right = 670.912
+margin_bottom = 295.129
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "    W  
 A  S  D"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/start = SubResource( 4 )
+anims/tutorial = SubResource( 5 )
+next/start = "tutorial"
 
 
 [editable path="Mapa/Ground9"]

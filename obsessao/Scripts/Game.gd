@@ -2,6 +2,9 @@ extends Node2D
 
 var music = "res://SFX/Gameplay/Indiana_Joao_e_o_Templo_da_Perseguicao_-_Templo.ogg"
 
+var start_game = false
+var anim_finish = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.game = self
@@ -14,3 +17,12 @@ func do_damage():
 	
 	if Global.player.lifes <= 0:
 		Global.player.dead()
+		
+func _input(event):
+	if anim_finish and not start_game:
+		if Input.is_action_just_pressed("move"):
+			start_game = true
+			Global.ghost.start_animation()
+
+func finish_animation():
+		anim_finish = true

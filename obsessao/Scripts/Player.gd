@@ -17,9 +17,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if not is_dead:
-		move()
-		move_and_slide(motion * speed)
+	if Global.game.start_game:
+		if not is_dead:
+			move()
+			move_and_slide(motion * speed)
 
 func move():
 	

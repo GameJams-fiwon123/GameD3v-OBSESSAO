@@ -11,13 +11,13 @@
 [ext_resource path="res://GFX/Player/Vertical/tile001.png" type="Texture" id=9]
 [ext_resource path="res://GFX/Player/Vertical/tile002.png" type="Texture" id=10]
 [ext_resource path="res://GFX/Player/Vertical/tile003.png" type="Texture" id=11]
-[ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=12]
-[ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=13]
-[ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=14]
-[ext_resource path="res://GFX/Player/Dead/tile000.png" type="Texture" id=15]
-[ext_resource path="res://GFX/Player/Dead/tile001.png" type="Texture" id=16]
-[ext_resource path="res://GFX/Player/Dead/tile002.png" type="Texture" id=17]
-[ext_resource path="res://GFX/Player/Dead/tile003.png" type="Texture" id=18]
+[ext_resource path="res://GFX/Player/Dead/tile000.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Player/Dead/tile001.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Player/Dead/tile002.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Player/Dead/tile003.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -36,14 +36,14 @@ animations = [ {
 "name": "vertical",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": false,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "down",
 "speed": 5.0
 } ]
 
@@ -65,7 +65,8 @@ texture = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "down"
+animation = "vertical"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

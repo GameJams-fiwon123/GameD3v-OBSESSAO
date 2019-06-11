@@ -24,3 +24,11 @@ func _process(delta):
 
 func _on_Ghost_body_entered(body):
 	body.dead()
+	
+func start_animation():
+	$Timer.start()
+
+
+func _on_Timer_timeout():
+	$AnimationPlayer.play("default")
+	$Timer.start()
