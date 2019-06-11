@@ -27,20 +27,23 @@ var index2 = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Global.game.start_game:
-		var pos_ref = Vector2(0, global_position.y)
-	
-		print(destinations_position[index2].distance_to(pos_ref))
-		if destinations_position[index2].distance_to(pos_ref) <= 10:
-			match index2:
-				0:
-					index2 = 1
-					motion.y = 0.5
-				1:
-					index2 = 0
-					motion.y = -0.5
 		
-		motion.x = 1
-		move_and_slide(motion * speed)
+		if global_position.x <= 30300:
+			var pos_ref = Vector2(0, global_position.y)
+	
+			if destinations_position[index2].distance_to(pos_ref) <= 10:
+				match index2:
+					0:
+						index2 = 1
+						motion.y = 0.5
+					1:
+						index2 = 0
+						motion.y = -0.5
+			
+			motion.x = 1
+			move_and_slide(motion * speed)
+		elif $Camera2D.offset.x != 0:
+			$Camera2D/AnimationPlayer.play("default")
 
 
 
@@ -92,7 +95,11 @@ func _on_Detector_body_entered(body):
 
 
 func _on_DetectorWin_body_entered(body):
-	get_tree().change_scene(Global.FINAL)
+	$Sprite.visible = false
+	$Shadow.visible = false
+	$Light2D.visible = false
+	body.win()
+	Global.game.win()
 
 
 func _on_Timer_timeout():

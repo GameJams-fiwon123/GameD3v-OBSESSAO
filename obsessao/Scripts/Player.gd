@@ -54,3 +54,6 @@ func dead():
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "dead":
 		get_tree().change_scene(Global.GAME_OVER)
+		
+func win():
+	sprite.play("win")

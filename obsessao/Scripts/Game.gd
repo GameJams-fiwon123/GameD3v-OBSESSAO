@@ -22,7 +22,17 @@ func _input(event):
 	if anim_finish and not start_game:
 		if Input.is_action_just_pressed("move"):
 			start_game = true
+			$Label.visible = false
 			Global.ghost.start_animation()
 
 func finish_animation():
 		anim_finish = true
+		
+func win():
+	start_game = false
+	$AnimationPlayer.play("win")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "win":
+		get_tree().change_scene(Global.FINAL)
