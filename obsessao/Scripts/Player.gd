@@ -11,6 +11,8 @@ var speed = 450
 
 var is_dead = false
 
+var can_take_damage = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.player = self
@@ -57,3 +59,21 @@ func _on_AnimatedSprite_animation_finished():
 		
 func win():
 	sprite.play("win")
+	
+func take_damage():
+	if can_take_damage:	
+		lifes -= 1
+		$AudioStreamPlayer.play()
+		$AnimationPlayer.play("take_damage")
+		$TimerTakeDamage.start()
+		can_take_damage = false
+		Global.hud.change_life(Global.player.lifes)
+		
+		if Global.player.lifes <= 0:
+			Global.player.dead()
+
+
+func _on_TimerTakeDamage_timeout():
+	$AnimationPlayer.stop()
+	$AnimatedSprite.visible = true
+	can_take_damage = true

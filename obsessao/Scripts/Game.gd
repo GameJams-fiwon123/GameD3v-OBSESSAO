@@ -22,11 +22,7 @@ func _ready():
 	Global.audio.play()
 
 func do_damage():
-	Global.player.lifes -= 1
-	Global.hud.change_life(Global.player.lifes)
-	
-	if Global.player.lifes <= 0:
-		Global.player.dead()
+	Global.player.take_damage()
 		
 func _input(event):
 	if anim_finish and not start_game:
