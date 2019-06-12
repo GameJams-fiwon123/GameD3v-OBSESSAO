@@ -19,7 +19,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.game.start_game:
+	if Global.game.start_game and not Global.game.is_win :
 		if not is_dead:
 			move()
 			move_and_slide(motion * speed)

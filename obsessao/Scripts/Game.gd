@@ -1,6 +1,7 @@
 extends Node2D
 
 var music = "res://SFX/Gameplay/Indiana_Joao_e_o_Templo_da_Perseguicao_-_Templo.ogg"
+var	win_audio = "res://SFX/Screen/Vitoria.ogg"
 
 onready var a_input = $Buttons/A
 onready var w_input = $Buttons/W
@@ -13,6 +14,7 @@ var is_s_input = false
 var is_d_input = false
 
 var start_game = false
+var is_win = false
 var anim_finish = false
 
 # Called when the node enters the scene tree for the first time.
@@ -57,7 +59,12 @@ func finish_animation():
 		
 func win():
 	start_game = false
+	is_win = true
 	$AnimationPlayer.play("win")
+	
+func play_win():
+	Global.audio.stream = load(win_audio)
+	Global.audio.play()
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

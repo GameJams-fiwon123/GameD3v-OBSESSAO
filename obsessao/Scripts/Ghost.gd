@@ -28,7 +28,7 @@ func _on_Ghost_body_entered(body):
 func start_animation():
 	$Timer.start()
 
-
 func _on_Timer_timeout():
-	$AnimationPlayer.play("default")
-	$Timer.start()
+	if not Global.game.is_win:
+		$AnimationPlayer.play("default")
+		$Timer.start()
