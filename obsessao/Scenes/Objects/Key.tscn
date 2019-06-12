@@ -78,7 +78,7 @@ texture = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "open"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -104,7 +104,7 @@ anims/fly = SubResource( 5 )
 
 [node name="Light2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( 0, 0 )
-energy = 1.5
+energy = 1.1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
@@ -120,7 +120,7 @@ position = Vector2( 0, -97.3735 )
 position = Vector2( 0, 130.309 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 12 )]
-offset = Vector2( -400, 0 )
+offset = Vector2( -350, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
 anims/default = SubResource( 6 )
