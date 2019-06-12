@@ -15,8 +15,8 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 19.8014
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.0771, 21.6978 )
 
 [node name="Pedra" type="RigidBody2D"]
 collision_layer = 32
@@ -30,7 +30,6 @@ frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 9.66829 )
 shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

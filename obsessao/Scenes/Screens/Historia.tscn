@@ -1,19 +1,18 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Historia.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Historia/Historia_pagina_4.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Historia/Historia_pagina_6.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Historia/Historia_pagina_1.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Historia/Historia_pagina_2.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Historia/Historia_pagina_3.png" type="Texture" id=5]
-[ext_resource path="res://GFX/Historia/Historia_pagina_5.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Historia/Historia_pagina_6.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Historia/Historia_pagina_4.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Historia/Historia_pagina_5.png" type="Texture" id=7]
 [ext_resource path="res://SFX/Fantasma.wav" type="AudioStream" id=8]
 [ext_resource path="res://GFX/Fonts/zeldadxt.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "start"
-length = 46.0
-step = 1.0
+length = 44.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:texture")
 tracks/0/interp = 1
@@ -21,10 +20,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 10, 16, 20, 30, 40 ),
+"times": PoolRealArray( 0, 8, 14, 18, 28, 38 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AudioStreamPlayer:playing")
@@ -33,7 +32,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 40 ),
+"times": PoolRealArray( 38 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
@@ -45,7 +44,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 39.6 ),
+"times": PoolRealArray( 37 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ ExtResource( 8 ) ]
@@ -57,7 +56,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1, 9, 10, 11, 15, 16, 17, 19, 20, 21, 29, 30, 31, 39, 40, 41 ),
+"times": PoolRealArray( 0, 1, 7, 8, 9, 13, 14, 15, 17, 18, 19, 27, 28, 29, 37, 38, 39 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]

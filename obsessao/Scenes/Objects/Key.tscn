@@ -104,6 +104,7 @@ anims/fly = SubResource( 5 )
 
 [node name="Light2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( 0, 0 )
+scale = Vector2( 0.9, 0.9 )
 energy = 1.1
 
 [node name="Timer" type="Timer" parent="."]

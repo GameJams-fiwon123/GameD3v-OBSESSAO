@@ -37,7 +37,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 273.875
+radius = 317.976
 
 [sub_resource type="Animation" id=3]
 resource_name = "default"
@@ -95,6 +95,7 @@ autoplay = "default"
 anims/default = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 0.741577, 19.4261 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
