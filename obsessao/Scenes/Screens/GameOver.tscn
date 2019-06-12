@@ -9,6 +9,7 @@ size = 32
 font_data = ExtResource( 3 )
 
 [node name="GameOver" type="Control"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )

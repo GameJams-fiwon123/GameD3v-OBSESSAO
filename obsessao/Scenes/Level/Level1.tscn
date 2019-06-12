@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://GFX/Buttons/W/tile001.png" type="Texture" id=21]
 [ext_resource path="res://GFX/Buttons/D/tile000.png" type="Texture" id=22]
 [ext_resource path="res://GFX/Buttons/D/tile001.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Light/light.png" type="Texture" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 353.535, 308.138 )
@@ -467,6 +468,9 @@ z_index = 1
 [node name="Key" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1218.05, 342.788 )
 z_index = 1
+
+[node name="Sprite" parent="YSort/Key" index="1"]
+frame = 1
 
 [node name="Light2D" parent="YSort/Key" index="6"]
 scale = Vector2( 0.9, 0.9 )
@@ -1274,9 +1278,6 @@ editor/display_folded = true
 [node name="Morcego" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 15672.9, 86.8706 )
 
-[node name="Sprite" parent="Morcegos/Morcego" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego" index="2"]
 position = Vector2( 2.52527, -22.4729 )
 
@@ -1285,9 +1286,6 @@ position = Vector2( 11.6752, 580.685 )
 
 [node name="Morcego2" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16060.6, 179.665 )
-
-[node name="Sprite" parent="Morcegos/Morcego2" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego2" index="2"]
 position = Vector2( -4.8927, -114.867 )
@@ -1298,9 +1296,6 @@ position = Vector2( 3.64691, 109.444 )
 [node name="Morcego3" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16065.5, 509.722 )
 
-[node name="Sprite" parent="Morcegos/Morcego3" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego3" index="2"]
 position = Vector2( -3.72766, -95.0393 )
 
@@ -1309,9 +1304,6 @@ position = Vector2( 2.48089, 143.268 )
 
 [node name="Morcego4" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16317.8, 624.961 )
-
-[node name="Sprite" parent="Morcegos/Morcego4" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego4" index="2"]
 position = Vector2( -13.0587, -556.913 )
@@ -1322,9 +1314,6 @@ position = Vector2( 1.56683, 38.3646 )
 [node name="Morcego6" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 17786, 439.559 )
 
-[node name="Sprite" parent="Morcegos/Morcego6" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego6" index="2"]
 position = Vector2( 1.97253, -301.376 )
 
@@ -1333,9 +1322,6 @@ position = Vector2( 4.90667, 153.607 )
 
 [node name="Morcego7" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 16899.1, 297.593 )
-
-[node name="Sprite" parent="Morcegos/Morcego7" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego7" index="2"]
 position = Vector2( -3.03918, -161.081 )
@@ -1346,6 +1332,9 @@ position = Vector2( 3.23675, 295.572 )
 [node name="Morcego8" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18104.9, 218.76 )
 
+[node name="Sprite" parent="Morcegos/Morcego8" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego8" index="2"]
 position = Vector2( 4.96082, -85.0809 )
 
@@ -1354,6 +1343,9 @@ position = Vector2( 3.23675, 89.5726 )
 
 [node name="Morcego9" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18108.7, 503.077 )
+
+[node name="Sprite" parent="Morcegos/Morcego9" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego9" index="2"]
 position = Vector2( -0.0391846, -88.0809 )
@@ -1364,9 +1356,6 @@ position = Vector2( 2.23675, 88.5726 )
 [node name="Morcego10" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18486.1, 367.38 )
 
-[node name="Sprite" parent="Morcegos/Morcego10" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego10" index="2"]
 position = Vector2( 3.96082, -96.0808 )
 
@@ -1375,9 +1364,6 @@ position = Vector2( 8.23675, 86.5726 )
 
 [node name="Morcego11" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18878.1, 235.221 )
-
-[node name="Sprite" parent="Morcegos/Morcego11" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego11" index="2"]
 position = Vector2( -3.03918, -100.081 )
@@ -1388,9 +1374,6 @@ position = Vector2( 0.236753, 80.5726 )
 [node name="Morcego12" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 18880.3, 510.831 )
 
-[node name="Sprite" parent="Morcegos/Morcego12" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego12" index="2"]
 position = Vector2( -3.03918, -99.0808 )
 
@@ -1399,9 +1382,6 @@ position = Vector2( -0.763247, 81.5727 )
 
 [node name="Morcego13" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19391, 88.8915 )
-
-[node name="Sprite" parent="Morcegos/Morcego13" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego13" index="2"]
 position = Vector2( -1.81262, -25.4168 )
@@ -1412,9 +1392,6 @@ position = Vector2( 1.69183, 557.934 )
 [node name="Morcego14" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19648.9, 227.626 )
 
-[node name="Sprite" parent="Morcegos/Morcego14" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego14" index="2"]
 position = Vector2( -4.26575, -162.923 )
 
@@ -1423,9 +1400,6 @@ position = Vector2( 6.60394, 424.111 )
 
 [node name="Morcego15" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19518.7, 647.511 )
-
-[node name="Sprite" parent="Morcegos/Morcego15" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego15" index="2"]
 position = Vector2( -7.95129, -584.036 )
@@ -1436,6 +1410,9 @@ position = Vector2( 1.69183, 15.275 )
 [node name="Morcego16" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19772.9, 496.499 )
 
+[node name="Sprite" parent="Morcegos/Morcego16" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego16" index="2"]
 position = Vector2( -4.2677, -433.025 )
 
@@ -1444,9 +1421,6 @@ position = Vector2( 4.14691, 165.059 )
 
 [node name="Morcego17" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 19901.8, 361.449 )
-
-[node name="Sprite" parent="Morcegos/Morcego17" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego17" index="2"]
 position = Vector2( -3.03918, -299.202 )
@@ -1457,9 +1431,6 @@ position = Vector2( 11.5141, 297.654 )
 [node name="Morcego18" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 20034.4, 361.449 )
 
-[node name="Sprite" parent="Morcegos/Morcego18" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego18" index="2"]
 position = Vector2( -6.72278, -297.974 )
 
@@ -1468,9 +1439,6 @@ position = Vector2( 10.2856, 303.793 )
 
 [node name="Morcego19" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 20140, 219.031 )
-
-[node name="Sprite" parent="Morcegos/Morcego19" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego19" index="2"]
 position = Vector2( -1.81067, -161.695 )
@@ -1481,9 +1449,6 @@ position = Vector2( 18.8793, 438.844 )
 [node name="Morcego20" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 20283.6, 507.549 )
 
-[node name="Sprite" parent="Morcegos/Morcego20" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego20" index="2"]
 position = Vector2( -11.6329, -445.302 )
 
@@ -1492,9 +1457,6 @@ position = Vector2( 2.92035, 149.098 )
 
 [node name="Morcego21" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 23225.9, 498.505 )
-
-[node name="Sprite" parent="Morcegos/Morcego21" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego21" index="2"]
 position = Vector2( 0.644409, -92.9422 )
@@ -1505,9 +1467,6 @@ position = Vector2( 2.92035, 96.3055 )
 [node name="Morcego22" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 23232, 221.155 )
 
-[node name="Sprite" parent="Morcegos/Morcego22" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego22" index="2"]
 position = Vector2( -4.2677, -88.0313 )
 
@@ -1516,6 +1475,9 @@ position = Vector2( -0.763247, 87.7113 )
 
 [node name="Morcego23" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 23488.2, 365.859 )
+
+[node name="Sprite" parent="Morcegos/Morcego23" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego23" index="2"]
 position = Vector2( -5.49426, -302.885 )
@@ -1526,6 +1488,9 @@ position = Vector2( -0.763247, 293.971 )
 [node name="Morcego24" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24505.3, 227.235 )
 
+[node name="Sprite" parent="Morcegos/Morcego24" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego24" index="2"]
 position = Vector2( -3.98645, -156.673 )
 
@@ -1534,9 +1499,6 @@ position = Vector2( -0.763247, 82.9437 )
 
 [node name="Morcego25" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24507, 507.825 )
-
-[node name="Sprite" parent="Morcegos/Morcego25" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego25" index="2"]
 position = Vector2( -0.972778, -93.3651 )
@@ -1547,9 +1509,6 @@ position = Vector2( 2.25043, 153.788 )
 [node name="Morcego26" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24764.2, 78.5887 )
 
-[node name="Sprite" parent="Morcegos/Morcego26" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego26" index="2"]
 position = Vector2( 1.78894, -15.5537 )
 
@@ -1558,9 +1517,6 @@ position = Vector2( 3.11371, 97.5331 )
 
 [node name="Morcego27" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24769.2, 364.189 )
-
-[node name="Sprite" parent="Morcegos/Morcego27" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego27" index="2"]
 position = Vector2( -4.20129, -97.4008 )
@@ -1571,9 +1527,6 @@ position = Vector2( -0.763247, 91.0714 )
 [node name="Morcego28" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 24767.6, 646.449 )
 
-[node name="Sprite" parent="Morcegos/Morcego28" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego28" index="2"]
 position = Vector2( -3.27942, -99.0072 )
 
@@ -1582,9 +1535,6 @@ position = Vector2( 0.344175, 15.8551 )
 
 [node name="Morcego29" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25024.8, 502.814 )
-
-[node name="Sprite" parent="Morcegos/Morcego29" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego29" index="2"]
 position = Vector2( -2.77356, -441.643 )
@@ -1595,9 +1545,6 @@ position = Vector2( -3.48395, -194.402 )
 [node name="Morcego30" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25021.4, 220.554 )
 
-[node name="Sprite" parent="Morcegos/Morcego30" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego30" index="2"]
 position = Vector2( -2.77356, 185.488 )
 
@@ -1606,9 +1553,6 @@ position = Vector2( 6.03949, 443.612 )
 
 [node name="Morcego31" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25280.3, 81.9291 )
-
-[node name="Sprite" parent="Morcegos/Morcego31" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego31" index="2"]
 position = Vector2( -2.77356, -18.5673 )
@@ -1619,9 +1563,6 @@ position = Vector2( -3.48395, 92.6359 )
 [node name="Morcego32" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25275.3, 365.859 )
 
-[node name="Sprite" parent="Morcegos/Morcego32" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego32" index="2"]
 position = Vector2( -1.41418, -100.19 )
 
@@ -1630,9 +1571,6 @@ position = Vector2( 1.95746, 91.2755 )
 
 [node name="Morcego33" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25277, 643.109 )
-
-[node name="Sprite" parent="Morcegos/Morcego33" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego33" index="2"]
 position = Vector2( 1.30847, -93.3878 )
@@ -1643,6 +1581,9 @@ position = Vector2( 1.95746, 19.1758 )
 [node name="Morcego34" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25537.5, 222.224 )
 
+[node name="Sprite" parent="Morcegos/Morcego34" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego34" index="2"]
 position = Vector2( -5.49426, -154.604 )
 
@@ -1651,6 +1592,9 @@ position = Vector2( -3.48395, 89.9151 )
 
 [node name="Morcego35" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 25537.5, 502.814 )
+
+[node name="Sprite" parent="Morcegos/Morcego35" index="0"]
+frame = 1
 
 [node name="Position" parent="Morcegos/Morcego35" index="2"]
 position = Vector2( -2.77356, -93.3877 )
@@ -1661,6 +1605,9 @@ position = Vector2( 1.95746, 153.853 )
 [node name="Morcego36" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 28604.7, 86.8164 )
 
+[node name="Sprite" parent="Morcegos/Morcego36" index="0"]
+frame = 1
+
 [node name="Position" parent="Morcegos/Morcego36" index="2"]
 position = Vector2( 1.98621, -14.0542 )
 
@@ -1669,9 +1616,6 @@ position = Vector2( -1.21637, 555.281 )
 
 [node name="Morcego37" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 28726.9, 643.738 )
-
-[node name="Sprite" parent="Morcegos/Morcego37" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego37" index="2"]
 position = Vector2( 0.400268, -563.042 )
@@ -1682,9 +1626,6 @@ position = Vector2( 3.54535, 4.70596 )
 [node name="Morcego38" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 28980.8, 638.978 )
 
-[node name="Sprite" parent="Morcegos/Morcego38" index="0"]
-frame = 3
-
 [node name="Position" parent="Morcegos/Morcego38" index="2"]
 position = Vector2( 8.33582, -553.522 )
 
@@ -1693,9 +1634,6 @@ position = Vector2( 3.5434, 3.11929 )
 
 [node name="Morcego39" parent="Morcegos" instance=ExtResource( 14 )]
 position = Vector2( 29125.1, 80.4697 )
-
-[node name="Sprite" parent="Morcegos/Morcego39" index="0"]
-frame = 3
 
 [node name="Position" parent="Morcegos/Morcego39" index="2"]
 position = Vector2( -1.18762, 1.81252 )
@@ -1830,6 +1768,12 @@ animation = "up"
 position = Vector2( 622.713, 334.625 )
 frames = SubResource( 6 )
 animation = "up"
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 537.797, 332.365 )
+scale = Vector2( 0.3, 0.5 )
+texture = ExtResource( 24 )
+energy = 0.8
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
