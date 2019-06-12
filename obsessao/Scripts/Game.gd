@@ -29,13 +29,13 @@ func do_damage():
 func _input(event):
 	if anim_finish and not start_game:
 		if Input.is_action_just_pressed("right"):
-			d_input.play("pressed")
+			d_input.pressed_button()
 		elif Input.is_action_just_pressed("left"):
-			a_input.play("pressed")
+			a_input.pressed_button()
 		elif Input.is_action_just_pressed("up"):
-			w_input.play("pressed")
+			w_input.pressed_button()
 		elif Input.is_action_just_pressed("down"):
-			s_input.play("pressed")
+			s_input.pressed_button()
 		elif Input.is_action_just_released("right"):
 			d_input.visible = false
 			is_d_input = true

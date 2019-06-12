@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GFX/Buttons/A/tile000.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Buttons/A/tile001.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=3]
+[ext_resource path="res://GFX/Buttons/Light/light_button_up.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "up",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "pressed",
+"speed": 5.0
+} ]
+
+[node name="Button" type="AnimatedSprite"]
+position = Vector2( 478.233, 333.819 )
+frames = SubResource( 1 )
+animation = "up"
+script = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 4 )
+
