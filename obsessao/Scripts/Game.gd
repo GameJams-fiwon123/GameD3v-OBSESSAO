@@ -2,6 +2,16 @@ extends Node2D
 
 var music = "res://SFX/Gameplay/Indiana_Joao_e_o_Templo_da_Perseguicao_-_Templo.ogg"
 
+onready var a_input = $Buttons/A
+onready var w_input = $Buttons/W
+onready var s_input = $Buttons/S
+onready var d_input = $Buttons/D
+
+var is_a_input = false
+var is_w_input = false
+var is_s_input = false
+var is_d_input = false
+
 var start_game = false
 var anim_finish = false
 
@@ -20,9 +30,29 @@ func do_damage():
 		
 func _input(event):
 	if anim_finish and not start_game:
-		if Input.is_action_just_pressed("move"):
+		if Input.is_action_just_pressed("right"):
+			d_input.play("pressed")
+		elif Input.is_action_just_pressed("left"):
+			a_input.play("pressed")
+		elif Input.is_action_just_pressed("up"):
+			w_input.play("pressed")
+		elif Input.is_action_just_pressed("down"):
+			s_input.play("pressed")
+		elif Input.is_action_just_released("right"):
+			d_input.visible = false
+			is_d_input = true
+		elif Input.is_action_just_released("left"):
+			a_input.visible = false
+			is_a_input = true
+		elif Input.is_action_just_released("up"):
+			w_input.visible = false
+			is_w_input = true
+		elif Input.is_action_just_released("down"):
+			s_input.visible = false
+			is_s_input = true
+			
+		if is_a_input and is_w_input and is_s_input and is_d_input:
 			start_game = true
-			$Label.visible = false
 			Global.ghost.start_animation()
 
 func finish_animation():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=2]
@@ -37,11 +37,11 @@ animations = [ {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "up",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "presssed",
+"name": "pressed",
 "speed": 5.0
 } ]
 
@@ -125,11 +125,6 @@ tracks/2/keys = {
 "method": "finish_animation"
 } ]
 }
-
-[sub_resource type="Animation" id=4]
-resource_name = "tutorial"
-length = 2.0
-loop = true
 
 [sub_resource type="Animation" id=5]
 resource_name = "win"
@@ -468,12 +463,15 @@ position = Vector2( 30263.5, 345.086 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 549.003, 334.53 )
+position = Vector2( -770.374, 340.142 )
 z_index = 1
 
 [node name="Key" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 1218.05, 342.788 )
+position = Vector2( -242.882, 342.788 )
 z_index = 1
+
+[node name="Sprite" parent="YSort/Key" index="1"]
+frame = 2
 
 [node name="Light2D" parent="YSort/Key" index="6"]
 energy = 1.1
@@ -1768,7 +1766,6 @@ animation = "up"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "start"
 anims/start = SubResource( 3 )
-anims/tutorial = SubResource( 4 )
 anims/win = SubResource( 5 )
 next/start = "tutorial"
 

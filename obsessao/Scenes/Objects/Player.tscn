@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Shadow.png" type="Texture" id=2]
@@ -15,10 +15,10 @@
 [ext_resource path="res://GFX/Player/Dead/tile001.png" type="Texture" id=13]
 [ext_resource path="res://GFX/Player/Dead/tile002.png" type="Texture" id=14]
 [ext_resource path="res://GFX/Player/Dead/tile003.png" type="Texture" id=15]
-[ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=16]
-[ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=17]
-[ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=18]
-[ext_resource path="res://GFX/Player/Win/Indiana_Joao_e_chave.png" type="Texture" id=19]
+[ext_resource path="res://GFX/Player/Win/Indiana_Joao_e_chave.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Player/Down/tile001.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Player/Down/tile002.png" type="Texture" id=18]
+[ext_resource path="res://GFX/Player/Down/tile003.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -42,23 +42,19 @@ animations = [ {
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ) ],
+"frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "win",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "down",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 17.8804, 7.91563 )
-
-[sub_resource type="OccluderPolygon2D" id=3]
-cull_mode = 1
-polygon = PoolVector2Array( -26.87, 2.24176, -27.0903, -11.5311, -17.5044, -21.7781, -5.27416, -26.1854, 14.3384, -24.2021, 27.2298, -11.7514, 27.3399, 2.24176, 15.6606, 14.6924, 6.29503, 18.1081, -6.04544, 18.1081, -18.1655, 14.472 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -72,15 +68,11 @@ texture = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "vertical"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.563122, 24.7708 )
 shape = SubResource( 2 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-z_as_relative = false
-occluder = SubResource( 3 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

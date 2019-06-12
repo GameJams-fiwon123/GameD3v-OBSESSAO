@@ -30,7 +30,7 @@ margin_bottom = 327.5
 custom_constants/separation = 30
 
 [node name="ButtonStart" type="Button" parent="ColorRect/VBoxContainer"]
-margin_right = 273.0
+margin_right = 246.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -39,7 +39,7 @@ flat = true
 
 [node name="ButtonCredits" type="Button" parent="ColorRect/VBoxContainer"]
 margin_top = 71.0
-margin_right = 273.0
+margin_right = 246.0
 margin_bottom = 112.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -48,7 +48,7 @@ flat = true
 
 [node name="ButtonExit" type="Button" parent="ColorRect/VBoxContainer"]
 margin_top = 142.0
-margin_right = 273.0
+margin_right = 246.0
 margin_bottom = 183.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
