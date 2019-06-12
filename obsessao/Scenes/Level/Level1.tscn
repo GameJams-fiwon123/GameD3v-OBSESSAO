@@ -478,7 +478,7 @@ position = Vector2( -11.5789, -280.53 )
 position = Vector2( 17.1882, 309.557 )
 
 [node name="Ghost" parent="YSort/Key" instance=ExtResource( 9 )]
-position = Vector2( -1373.04, 32.2106 )
+position = Vector2( -1367.73, 41.2028 )
 z_index = 2
 
 [node name="HUD" parent="." instance=ExtResource( 10 )]
