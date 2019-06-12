@@ -1,18 +1,19 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Historia.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Historia/Historia_pagina_6.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Historia/Historia_pagina_4.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Historia/Historia_pagina_1.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Historia/Historia_pagina_2.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Historia/Historia_pagina_3.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Historia/Historia_pagina_5.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Historia/Historia_pagina_4.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Historia/Historia_pagina_6.png" type="Texture" id=7]
 [ext_resource path="res://SFX/Fantasma.wav" type="AudioStream" id=8]
 [ext_resource path="res://GFX/Fonts/zeldadxt.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "start"
 length = 46.0
+step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:texture")
 tracks/0/interp = 1
@@ -23,7 +24,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 10, 16, 20, 30, 40 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AudioStreamPlayer:playing")
