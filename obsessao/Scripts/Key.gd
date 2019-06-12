@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-var base_speed = 450
-var speed = 450
+var base_speed = 400
+var speed = 400
 
 var motion = Vector2()
 var possible_destination = []

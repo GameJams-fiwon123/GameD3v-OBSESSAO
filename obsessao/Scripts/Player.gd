@@ -6,8 +6,8 @@ onready var sprite = $AnimatedSprite
 
 var motion = Vector2()
 
-var base_speed = 500
-var speed = 500
+var base_speed = 450
+var speed = 450
 
 var is_dead = false
 

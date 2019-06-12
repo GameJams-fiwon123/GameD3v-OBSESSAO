@@ -57,6 +57,7 @@ func _input(event):
 
 func finish_animation():
 		anim_finish = true
+		$Buttons.visible = true
 		
 func win():
 	start_game = false
