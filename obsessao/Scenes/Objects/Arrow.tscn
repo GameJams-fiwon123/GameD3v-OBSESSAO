@@ -8,6 +8,7 @@
 extents = Vector2( 49.3217, 10 )
 
 [node name="Arrow" type="Area2D"]
+z_index = 1
 collision_layer = 16
 script = ExtResource( 1 )
 
