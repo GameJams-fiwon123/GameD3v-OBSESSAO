@@ -55,7 +55,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17.8804, 7.91563 )
+extents = Vector2( 14.3235, 7.91563 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "take_damage"
@@ -86,7 +86,7 @@ texture = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "vertical"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
