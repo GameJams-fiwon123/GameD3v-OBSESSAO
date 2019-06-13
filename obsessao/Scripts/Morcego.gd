@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var speed = 300
+var speed = 500
 
 var motion = Vector2()
 var can_change = true
