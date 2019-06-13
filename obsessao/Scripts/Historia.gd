@@ -13,5 +13,5 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func _on_ButtonSkip_pressed():
-	Global.audio.stop()
+	Global.audio.volume_db = -1000
 	get_tree().change_scene(Global.LEVEL1)

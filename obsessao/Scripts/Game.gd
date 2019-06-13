@@ -20,6 +20,7 @@ var anim_finish = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.game = self
+	Global.audio.volume_db = -10
 	Global.audio.stream = load(music)
 	Global.audio.play()
 
