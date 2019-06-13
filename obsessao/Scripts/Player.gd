@@ -6,8 +6,8 @@ onready var sprite = $AnimatedSprite
 
 var motion = Vector2()
 
-var base_speed = 450
-var speed = 450
+var base_speed = 500
+var speed = 500
 
 var is_dead = false
 
@@ -22,7 +22,7 @@ func _process(delta):
 	if Global.game.start_game and not Global.game.is_win :
 		if not is_dead:
 			move()
-			move_and_slide(motion * speed)
+			move_and_slide(motion.normalized() * speed)
 
 func move():
 	
@@ -55,6 +55,7 @@ func dead():
 
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "dead":
+		Global.audio.stop()
 		get_tree().change_scene(Global.GAME_OVER)
 		
 func win():

@@ -69,4 +69,5 @@ func play_win():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "win":
+		Global.audio.stop()
 		get_tree().change_scene(Global.FINAL)

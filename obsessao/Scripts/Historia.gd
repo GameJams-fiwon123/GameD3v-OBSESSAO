@@ -7,14 +7,11 @@ func _ready():
 	Global.audio.stream = load(audio_stream)
 	Global.audio.play()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	get_tree().change_scene(Global.LEVEL1)
 
 
 func _on_ButtonSkip_pressed():
+	Global.audio.stop()
 	get_tree().change_scene(Global.LEVEL1)
