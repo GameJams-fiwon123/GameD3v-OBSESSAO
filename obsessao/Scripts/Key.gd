@@ -97,7 +97,7 @@ func update_path():
 func _on_Detector_body_entered(body):
 	speed = base_speed * 2
 	$Timer.start()
-	detector.disabled = true
+	detector.set_deferred("disabled", true)
 
 
 func _on_DetectorWin_body_entered(body):
@@ -110,7 +110,7 @@ func _on_DetectorWin_body_entered(body):
 
 func _on_Timer_timeout():
 	speed = base_speed
-	detector.disabled = false
+	detector.set_deferred("disabled", false)
 
 
 

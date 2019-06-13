@@ -1,7 +1,7 @@
 extends Sprite
 
 func _on_Detect_body_entered(body):
-	$DetecOut/CollisionShape2D.disabled = false
+	$DetecOut/CollisionShape2D.set_deferred("disabled", true)
 	for item in $Arrows.get_children():
 		item.speed = item.base_speed
 		item.audio.play()
